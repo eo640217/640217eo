@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import avatar from '../images/avatar.jpg'
 
 const Navigation = () => {
@@ -10,22 +10,22 @@ const Navigation = () => {
                 <img src={avatar} alt="avatar" />
             </div>
             <ul className='nav-items'>
-            
-                <li className='nav-item'>    
-                    <NavLink to='/' activeClassName= 'active-class'>Home</NavLink>
-                    </li>
-                <li className='nav-item'>    
-                    <NavLink to='/work' activeClassName= 'active-class'>Work</NavLink>
-                    </li>
-                <li className='nav-item'>    
-                    <NavLink to='/skills' activeClassName= 'active-class'>Skills</NavLink>
-                    </li>
-                <li className='nav-item'>    
-                    <NavLink to='/about' activeClassName= 'active-class'>About</NavLink>   
-                    </li>                 
-                <li className='nav-item'>    
-                    <NavLink to='/contact' activeClassName= 'active-class'>Contact</NavLink>                    
-                    </li>
+
+                <li className='nav-item'>
+                    <NavLink to='/' activeClassName='active-class'>Home</NavLink>
+                </li>
+                <li className='nav-item'>
+                    <NavLink to='/work' activeClassName='active-class'>Work</NavLink>
+                </li>
+                <li className='nav-item'>
+                    <NavLink to='/skills' activeClassName='active-class'>Skills</NavLink>
+                </li>
+                <li className='nav-item'>
+                    <NavLink to='/about' activeClassName='active-class'>About</NavLink>
+                </li>
+                <li className='nav-item'>
+                    <NavLink to='/contact' activeClassName='active-class'>Contact</NavLink>
+                </li>
             </ul>
             <footer className="footer"><p>Emmanuel Olufelo</p>        </footer>
 

@@ -16,4 +16,5 @@ const SidebarStyled = styled.div`
     position: fixed;
     border-right: 2px solid var(--border-color);
     background-color: var(--sidebar-dark-color);
+
 `;

@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
         --background-dark-color: #10121A;
         --background-dark-grey: #191D2B;
         --border-color: #2e344e;
-        /* --border-color: white; */
+        --color-white: white;
         --background-light-color: #F1F1F1;
         --background-light-color-2: rgba(3,127,255,.3);
         --white-color: #FFF;
@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
         --scrollbar-bg-color: #383838;
         --scrollbar-thump-color: #6b6b6b;
         --scrollbar-track-color: #383838;
-        --typewriterSpeed: 2s;
+        --typewriterSpeed: 3s;
         --typewriterCharacters:24;
     }
     *{

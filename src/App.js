@@ -3,32 +3,30 @@ import React from 'react'
 // import { Contact } from './components/Contact';
 import { Sidebar } from './components/Sidebar'
 import styled from 'styled-components';
-import { Landing } from './components/Landing';
+import { Landing } from './views/LandingView';
 import { Work } from './components/Work';
 
 function App() {
   return (
     <div className='App'>
-      <Sidebar />
+      {/* <Sidebar /> */}
       <MainContentStyled>
-        <div className="lines">
+        {/* <div className="lines">
           <div className="line-1"></div>
           <div className="line-2"></div>
           <div className="line-3"></div>
           <div className="line-4"></div>
-        </div>
-
+        </div> */}
         <Landing />
+        <Work />
       </MainContentStyled>
-      <Work />
     </div>
   );
 }
 
 const MainContentStyled = styled.main`
 position: relative;
-margin-left: 16.3rem;
-min-height: 100vh;
+  
 .lines{
   position: absolute;
   min-height: 100vh;

@@ -58,7 +58,7 @@ function Particle() {
                             "enable": true,
                             "speed": 2,
                             "direction": "none",
-                            "random": false,
+                            "random": true,
                             "straight": false,
                             "out_mode": "bounce",
                             "bounce": false,
@@ -76,10 +76,10 @@ function Particle() {
                                 "enable": true,
                                 "mode": "grab"
                             },
-                            "onclick": {
-                                "enable": true,
-                                "mode": "remove"
-                            },
+                            // "onclick": {
+                            //     "enable": true,
+                            //     "mode": "remove"
+                            // },
                             "resize": true
                         },
                         "modes": {
@@ -102,16 +102,14 @@ function Particle() {
                             "push": {
                                 "particles_nb": 2
                             },
-                            "remove": {
-                                "particles_nb": 2
-                            }
+                            // "remove": {
+                            //     "particles_nb": 2
+                            // }
                         }
                     },
                     "retina_detect": true
-
-                }}
-
-
+                }
+                }
             />
         </>
     )
