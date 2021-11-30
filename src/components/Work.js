@@ -29,11 +29,15 @@ export const Work = () => {
 }
 
 const WorkPageStyled = styled.header`
-    width: 100%;
-    height: 100vh;
-    padding: 0rem 10rem;
+    width: 85%;
+    height: 90vh;
+    /* padding: 0rem 10rem; */
     text-align:center;
-    background-color: var(--color-white);
+    background-color: var(--border-color);
+    /* outline: 2px solid red; */
+    *{
+         /* outline: 1px solid red; */
+    }
     .work-con{
         display: grid;
         display: inline-block;
@@ -43,7 +47,7 @@ const WorkPageStyled = styled.header`
             font-size: 2rem;
             text-align:left;
             padding-top: 2rem;
-            color:var(--background-dark-color);
+            color:var(--white-color);
             border-bottom: 2px solid red;
             width: max-content;
         }
@@ -61,4 +65,4 @@ const WorkPageStyled = styled.header`
     div{
         /* outline: 1px solid red; */
     }
-  `
+`

@@ -10,7 +10,7 @@ export const Landing = () => {
     return (
         <LandingPageStyled>
             <div className="particles-con">
-                {/* <Particle /> */}
+                <Particle />
             </div>
             <div className='typography'>
                 <h1>Hello World, I'm<br /> <span><h1 className='name'>Emmanuel Olufelo.</h1></span></h1>
@@ -33,6 +33,13 @@ export const Landing = () => {
                         <LinkedinIcon />
                     </a>
                 </div>
+                <div className='chev-con'>
+                    <div class="chevrons">
+                        <div class="chevron"></div>
+                        <div class="chevron"></div>
+                        <div class="chevron"></div>
+                    </div>
+                </div>
             </div>
         </LandingPageStyled>
     )
@@ -41,10 +48,9 @@ export const Landing = () => {
 const LandingPageStyled = styled.header`
     width: 100%;
     height: 100vh;
-    /* background-image: url('https://images.unsplash.com/photo-1504615184385-a3568a1c846e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80'); */
-    /* background-image: url('https://images.unsplash.com/photo-1483401757487-2ced3fa77952?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80'); */
     position: relative;
-    div{
+    text-align:center;
+    *{
         /* outline: 1px solid red ; */
     }
     .typography{
@@ -53,7 +59,6 @@ const LandingPageStyled = styled.header`
         left: 50%;
         color: white;
         transform: translate(-50%, -50%);
-        text-align:center;
     }
     .icons{
         justify-content: center;
@@ -140,6 +145,78 @@ const LandingPageStyled = styled.header`
         h1{
             font-size: 2rem;
         }
+    }
+    .chev-con{
+        display: flex;
+        justify-content: center;
+    }
+
+    .chevrons {
+        position: relative;
+        width: 28px;
+        height: 24px;
+    }
+
+    .chevron {
+        position: absolute;
+        width: 28px;
+        height: 8px;
+        opacity: 0;
+        transform: scale3d(0.5, 0.5, 0.5);
+        animation: move 3s ease-out infinite;
+    }
+
+    .chevron:first-child {
+    animation: move 3s ease-out 1s infinite;
+    }
+
+    .chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+    }
+
+    .chevron:before,
+    .chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #fff;
+    }
+
+    .chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+    }
+
+    .chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+    }
+
+    @keyframes move {
+    25% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    67% {
+        opacity: 1;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+    }
+
+    @keyframes pulse {
+    to {
+        opacity: 1;
+    }
     }
 
 
