@@ -3,41 +3,49 @@ import Particle from '../components/Particle';
 import styled from 'styled-components'
 import LinkedinIcon from '@material-ui/icons/LinkedIn'
 import GithubIcon from '@material-ui/icons/GitHub'
+import Particles from "react-tsparticles";
 import avatar from '../images/avatar.jpg'
 
 
 export const Landing = () => {
     return (
         <LandingPageStyled>
-            <div className="particles-con">
-                <Particle />
-            </div>
-            <div className='typography'>
-                <h1>Hello World, I'm<br /> <span><h1 className='name'>Emmanuel Olufelo.</h1></span></h1>
-                <div className="avatar">
-                    <img src={avatar} alt="avatar" />
+            <div className='landing-con'>
+                <div className='particles-con'>
+                    <Particle />
                 </div>
-                <p className='subtitle'>
-
-                    <h1>
-                        <span className='txt-type' data-wait="3000" data-words='["Developer", "Engineer", "Data Science", "Full Stack"]'></span>
-                    </h1>
-                    {/* <br /> */}
-                    Welcome to my portfolio!
-                </p>
-                <div className='icons'>
-                    <a href='https://github.com/eo640217' target="_blank" id="Github" className="icon i-github">
-                        <GithubIcon />
-                    </a>
-                    <a href='https://www.linkedin.com/in/emmanuel-olufelo-70775420b/' target="_blank" id="Linkedin" className="icon i-linkedin">
-                        <LinkedinIcon />
-                    </a>
-                </div>
-                <div className='chev-con'>
-                    <div class="chevrons">
-                        <div class="chevron"></div>
-                        <div class="chevron"></div>
-                        <div class="chevron"></div>
+                <div className='typography'>
+                    <h1>Hello World, I'm<br /> <span><h1 className='name'>Emmanuel Olufelo.</h1></span></h1>
+                    <div class="card">
+                        <div class="scroller">
+                            <span>
+                                Softaware Engineer<br />
+                                Analyst<br />
+                                Full Stack<br />
+                                Challenging
+                            </span>
+                        </div>
+                    </div>
+                    <div className="avatar">
+                        <img src={avatar} alt="avatar" />
+                    </div>
+                    <p className='subtitle'>
+                        Welcome to my portfolio!
+                    </p>
+                    <div className='icons'>
+                        <a href='https://github.com/eo640217' target="_blank" id="Github" className="icon i-github">
+                            <GithubIcon />
+                        </a>
+                        <a href='https://www.linkedin.com/in/emmanuel-olufelo-70775420b/' target="_blank" id="Linkedin" className="icon i-linkedin">
+                            <LinkedinIcon />
+                        </a>
+                    </div>
+                    <div className='chev-con'>
+                        <div class="chevrons">
+                            <div class="chevron"></div>
+                            <div class="chevron"></div>
+                            <div class="chevron"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -49,12 +57,25 @@ const LandingPageStyled = styled.header`
     width: 100%;
     height: 100vh;
     position: relative;
-    text-align:center;
     *{
-        /* outline: 1px solid red ; */
+        /* outline: 1px red solid; */
     }
-    .typography{
+
+    .particles-con{
         position: absolute;
+        /* text-align:center; */
+        height: 100%;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        color: white;
+        transform: translate(-50%, -50%);
+
+    }
+    
+    .typography{        
+        position: absolute;
+        text-align:center;
         top: 50%;
         left: 50%;
         color: white;
@@ -96,6 +117,7 @@ const LandingPageStyled = styled.header`
 
     .name::before{
          /* background-image: avatar; */
+        /* background:var(--background-dark-color); */
         background:var(--border-color);
         animation: typewriter var(--typewriterSpeed) forwards;
     }
@@ -214,14 +236,48 @@ const LandingPageStyled = styled.header`
     }
 
     @keyframes pulse {
-    to {
-        opacity: 1;
-    }
+        to {
+            opacity: 1;
+        }
     }
 
+.card {
+    position: relative;
+    cursor: default;
+    padding:0.5rem 0;
+    /* text-align: center */
+}
 
-    
-   
-  
+/* Scroller styling */
+.scroller {
+    height: 1.2em;
+    line-height: 1.2em;
+    text-align:center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+}
+.scroller > span {
+    position: relative;
+    top: 0;
+    animation: slide 8s infinite;
+    color: var(--white-color);
+    font-weight:bold;
+}
+@keyframes slide {
+    0% {
+        top: 0;
+    }
+    25% {
+        top: -1.2em;
+    }
+    50% {
+        top: -2.4em;
+    }
+    75% {
+        top: -3.6em;
+    }
+}
 
 `;

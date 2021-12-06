@@ -25,12 +25,12 @@ const ImageSection = () => {
                     <div className="about-info">
                         <div className="info-title">
                             <p>Full Name</p>
-                            <p>Location</p>
+                            {/* <p>Location</p> */}
                             <p>Languages</p>
                         </div>
                         <div className="info">
                             <p>: Emmanuel Olufelo</p>
-                            <p>: Brampton, Ontario Canada</p>
+                            {/* <p>: Brampton, Ontario Canada</p> */}
                             <p>: English / French</p>
                         </div>
                     </div>
@@ -46,7 +46,12 @@ export default ImageSection
 const ImageSectionStyled = styled.div`
 display: flex;
 margin-top: 5rem;
-/* background-color: rgba(25,29,43,0.44); */
+@media screen and (max-width:1000px){
+        flex-direction: column;
+        .left-content{
+            margin-bottom: 2rem;
+        }
+    }
 .right-content{
     h4{
         font-size: 2rem;
@@ -61,37 +66,38 @@ margin-top: 5rem;
         p{
             font-size: 1rem;
         }
-
         .info-title{
             padding-right: 3rem;
             p{
                 font-weight: 600;
             }
-
         }
         .info-title, .info{
             padding: 1rem 0;
             p{
                 padding: 0.01rem 0;
             }
-
         }
     }
     .paragraph{
         font-size: 1rem;
         padding: 1rem 0;
         color: var(--white-color);
+        
     }
 }
 .left-content{
-    width: 70%;
-    align-items: center;
-    img{
-        width: 60%;
-        height: 60%;
-        object-fit: cover ;
-        border-radius: 50%;
+        width: 100%;
+        vertical-align: middle;
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 95%;
+            object-fit: cover;
+            border-radius: 50%;
+            max-width: 300px;
+        }
     }
-}
 
 `

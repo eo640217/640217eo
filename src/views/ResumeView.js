@@ -18,7 +18,7 @@ export const ResumeView = () => {
 const ResumeViewStyled = styled.header`
     width: 100%;
     height: 100vh;
-    outline: 2px dotted var(--white-color);
-    background-color: var(--border-color);
+    /* outline: 2px dotted var(--white-color); */
+    /* background-color: var(--border-color); */
     
     `

@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import Particles from "react-tsparticles";
+import styled from 'styled-components';
 
 function Particle() {
     return (
         <>
-            <Particles width="100%" height="100%"
+            <Particles
                 params={{
                     "particles": {
                         "number": {
@@ -76,10 +77,6 @@ function Particle() {
                                 "enable": true,
                                 "mode": "grab"
                             },
-                            // "onclick": {
-                            //     "enable": true,
-                            //     "mode": "remove"
-                            // },
                             "resize": true
                         },
                         "modes": {
@@ -115,5 +112,8 @@ function Particle() {
     )
 
 }
+// const ParticlesStyled = styled.section`
+//     position: absolute !important;
+// `
 
 export default Particle;
