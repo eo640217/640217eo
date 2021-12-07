@@ -3,7 +3,6 @@ import Particle from '../components/Particle';
 import styled from 'styled-components'
 import LinkedinIcon from '@material-ui/icons/LinkedIn'
 import GithubIcon from '@material-ui/icons/GitHub'
-import Particles from "react-tsparticles";
 import avatar from '../images/avatar.jpg'
 
 
@@ -12,17 +11,17 @@ export const Landing = () => {
         <LandingPageStyled>
             <div className='landing-con'>
                 <div className='particles-con'>
-                    <Particle />
+                    <Particle value={24} type={"triangle"} />
                 </div>
                 <div className='typography'>
                     <h1>Hello World, I'm<br /> <span><h1 className='name'>Emmanuel Olufelo.</h1></span></h1>
                     <div class="card">
                         <div class="scroller">
                             <span>
-                                Softaware Engineer<br />
-                                Analyst<br />
-                                Full Stack<br />
-                                Challenging
+                                Software Engineer<br />
+                                Data Analyst<br />
+                                Full Stack Developer<br />
+                                Freelance
                             </span>
                         </div>
                     </div>
@@ -57,9 +56,6 @@ const LandingPageStyled = styled.header`
     width: 100%;
     height: 100vh;
     position: relative;
-    *{
-        /* outline: 1px red solid; */
-    }
 
     .particles-con{
         position: absolute;

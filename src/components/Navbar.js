@@ -2,11 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link, animateScroll as scroll } from "react-scroll";
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
-import { MainLayout } from '../styles/Layouts';
+import { InnerLayout } from '../styles/Layouts';
 
 const Navbar = () => {
     return (
-        <MainLayout>
+        <InnerLayout>
             <NavbarStyled>
                 <div className="nav-container">
                     <nav className="navbar">
@@ -60,7 +60,8 @@ const Navbar = () => {
                                     Skills
 
                                 </Link>
-                            </li><li className="nav-item">
+                            </li>
+                            <li className="nav-item">
                                 <Link
                                     activeClass="active"
                                     to="contact"
@@ -89,7 +90,7 @@ const Navbar = () => {
                     </nav>
                 </div>
             </NavbarStyled>
-        </MainLayout>
+        </InnerLayout>
     )
 }
 const NavbarStyled = styled.nav`
@@ -100,9 +101,10 @@ const NavbarStyled = styled.nav`
     width: 100%;
     color: rgba(255,255,255,0.3);
     justify-content: center;
-
+    
     .navbar ul{
-        border-radius:25px ;
+        /* border-radius:25px ; */
+        flex-wrap: wrap;
         display: flex;
         list-style: none;
         width: 100vh;
@@ -110,8 +112,8 @@ const NavbarStyled = styled.nav`
         transition: all .4s ease-in-out;
         &:hover{
             color: var(--white-color) ;
-            background-color:var(--border-color);
-            border-radius:35px ;
+            background-color: var(--background-dark-color);
+
             }
         }       
     .navbar ul li{
@@ -122,9 +124,31 @@ const NavbarStyled = styled.nav`
             text-decoration: none;
             transition: .4s ease-in-out;
             &:hover{
-                color: var(--primary-color);
+                /* color: var(--primary-color); */
         }
     }
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:40px;
+    height: 5px;
+    background: var(--background-dark-color);
+    opacity: 0;
+    bottom: 9px;
+    transition: all 0.2s ease-out;
+}
+.nav-item:hover:before {
+    transform: translateY(10px);
+    opacity: 1;
+    background: var(--primary-color);
 }
         `
 

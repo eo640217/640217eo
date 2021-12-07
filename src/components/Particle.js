@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import Particles from "react-tsparticles";
 import styled from 'styled-components';
 
-function Particle() {
+function Particle({ value, type }) {
     return (
         <>
             <Particles
                 params={{
                     "particles": {
                         "number": {
-                            "value": 24,
+                            "value": value,
                             "density": {
                                 "enable": true,
                                 "value_area": 1499.4041841268327
@@ -19,7 +19,7 @@ function Particle() {
                             "value": "#1957af"
                         },
                         "shape": {
-                            "type": "triangle",
+                            "type": type,
                             "stroke": {
                                 "width": 0,
                                 "color": "#000000"
@@ -98,10 +98,7 @@ function Particle() {
                             },
                             "push": {
                                 "particles_nb": 2
-                            },
-                            // "remove": {
-                            //     "particles_nb": 2
-                            // }
+                            }
                         }
                     },
                     "retina_detect": true

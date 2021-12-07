@@ -14,28 +14,22 @@ import Navbar from './components/Navbar';
 function App() {
   return (
     <div className='App'>
-      <Navbar />
       <MainContentStyled>
-        {/* <div className="lines">
-          <div className="line-1"></div>
-          <div className="line-2"></div>
-          <div className="line-3"></div>
-          <div className="line-4"></div>
-        </div> */}
+        <Navbar />
+        <section id="landing"><Landing /></section>
+        <section id="projects"><ProjectsView /></section>
+        <section id="resume"><ResumeView /></section>
+        <section id="about"><AboutView /></section>
+        <section id="contact"><ContactView /></section>
+        <section id="skills"><SkillsView /></section>
       </MainContentStyled>
-      <section id="landing"><Landing /></section>
-      <section id="projects"><ProjectsView /></section>
-      <section id="resume"><ResumeView /></section>
-      <section id="about"><AboutView /></section>
-      <section id="contact"><ContactView /></section>
-      <section id="skills"><SkillsView /></section>
 
     </div>
   );
 }
 
 const MainContentStyled = styled.main`
-  /* background-color: red; */
+  
 .lines{
   position: absolute;
   min-height: 100vh;
