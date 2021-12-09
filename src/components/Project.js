@@ -48,6 +48,23 @@ const ProjectComponentStyled = styled.div`
 .card-image {      
     width: 100%;
     height: auto;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--spacing-l);
+    bottom: 0;
+    filter: brightness(0.75) saturate(1.2) contrast(0.85);
+    left: 0;
+    right: 0;
+    top: 0;
+    transform-origin: center;
+    transform: scale(1) translateZ(0);
+    transition: 
+        filter 200ms linear,
+        transform 200ms linear;
+
+}
+.card-image:hover{
+    transform: scale(1.05) translateZ(0);
 }
 
 .card-overlay {
@@ -60,7 +77,7 @@ const ProjectComponentStyled = styled.div`
     border-radius: calc(var(--curve) * 1px) 0 0 0 ;    
     color: var(--white-color);
     text-align: center ;   
-    transform: translateY(50%);
+    transform: translateY(100%);
     transition: .2s ease-in-out;
 }
 
@@ -115,7 +132,8 @@ const ProjectComponentStyled = styled.div`
 }
 
 .card-description {
-    padding: 0 2em 2em;
+    /* text-align: justify; */
+    padding: 0 1em 2em;
     margin: 0;
     color: #D7BDCA;
     font-family: "MockFlowFont";   

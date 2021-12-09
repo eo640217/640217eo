@@ -78,7 +78,8 @@ strong{
     .about-info{
         display: flex;
         p{
-            font-size: 1rem;
+            font-size:0.9rem;
+            padding-bottom: 0.4rem;
         }
         .info-title{
             padding-right: 3rem;

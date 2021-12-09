@@ -22,12 +22,12 @@ export const ResumeView = () => {
                     </div>
                     <div className='resume-content'>
                         <ResumeItem
-                            title={'Data Analyst Intern'}
+                            title={'Sports Data Analyst Intern'}
                             subtitle={'Canadian Tire'}
                             description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '}
                             year={'Jan 2022 -'} />
                         <ResumeItem
-                            title={'Financial Analyst Intern'}
+                            title={'Financial Data Analyst Intern'}
                             subtitle={'Future Stars Sports'}
                             description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '}
                             year={'Apr 2021\n-Dec 2021'} />
@@ -40,7 +40,7 @@ export const ResumeView = () => {
                             title={'BSC Computer Science'}
                             subtitle={'Carleton University'}
                             description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '}
-                            year={'Sept 2017-\n2022'} />
+                            year={'Sept 2017-\nApr 2022'} />
                     </div>
                 </InnerLayout>
             </ResumeViewStyled>

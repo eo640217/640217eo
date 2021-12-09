@@ -67,6 +67,7 @@ const ContactViewStyled = styled.section`
         }
         .right-content{
             display: grid;
+            padding:2rem 0;
             grid-template-columns: repeat(1, 1fr);
             @media screen and (max-width: 502px){
                 width: 70%;
@@ -91,7 +92,7 @@ const ContactViewStyled = styled.section`
                 label{
                     position: absolute;
                     left: 20px;
-                    top: -19px;
+                    top: -30px;
                     display: inline-block;
                     background-color: var(--background-dark-color);
                     padding:0 .5rem;

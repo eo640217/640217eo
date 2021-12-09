@@ -18,8 +18,10 @@ const ContactItem = ({ icon, title, contact1 }) => {
 }
 const ContactItemStyled = styled.div`
     padding:1.5rem 2rem;
+    outline: solid var(--primary-color) 1px;
     background-color: var(--background-dark-grey);
     display: flex;
+    height: max-content;
     align-items: center;
     &:not(:last-child){
         margin-bottom: 2.5rem;
