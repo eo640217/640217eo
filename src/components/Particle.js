@@ -12,7 +12,7 @@ function Particle({ value, type }) {
                             "value": value,
                             "density": {
                                 "enable": true,
-                                "value_area": 1499.4041841268327
+                                "value_area": 1599.4041841268327
                             }
                         },
                         "color": {
@@ -29,7 +29,7 @@ function Particle({ value, type }) {
                             }
                         },
                         "opacity": {
-                            "value": 0.2,
+                            "value": 0.5,
                             "random": false,
                             "anim": {
                                 "enable": false,

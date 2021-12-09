@@ -21,6 +21,17 @@ const GlobalStyle = createGlobalStyle`
         --scrollbar-track-color: #383838;
         --typewriterSpeed: 3s;
         --typewriterCharacters:24;
+        --surface-color: #fff;
+        --curve: 40;  
+        --background-dark: #2d3548;
+        --text-light: rgba(255,255,255,0.6);
+        --text-lighter: rgba(255,255,255,0.9);
+        --spacing-s: 8px;
+        --spacing-m: 16px;
+        --spacing-l: 24px;
+        --spacing-xl: 32px;
+        --spacing-xxl: 64px;
+        --width-container: 1200px;
     }
     *{
         padding: 0;

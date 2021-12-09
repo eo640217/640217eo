@@ -59,7 +59,7 @@ const LandingPageStyled = styled.header`
 
     .particles-con{
         position: absolute;
-        /* text-align:center; */
+        text-align:center;
         height: 100%;
         width: 100%;
         top: 50%;
@@ -76,6 +76,53 @@ const LandingPageStyled = styled.header`
         left: 50%;
         color: white;
         transform: translate(-50%, -50%);
+        .name{
+            position: relative;
+            overflow: hidden;
+            display: block;
+            line-height: 1.2;
+        }
+        .name::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--white-color);
+            border-right: red;
+            animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
+            transform: translateX(-101%);
+        }
+        .name::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--background-dark-color);
+            animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
+            transform: translateX(0);
+        }
+
+        .name:nth-of-type(1)::before,.name:nth-of-type(1)::after{
+            animation-delay: 1s;
+        }
+
+        .name:nth-of-type(2)::before,
+        .name:nth-of-type(2)::after{
+            animation-delay: 1.5s;
+        }
+    }
+    @keyframes a-ltr-after{
+        0% {transform: translateX(-100%)}
+        100% {transform: translateX(101%)}
+    }
+
+    @keyframes a-ltr-before{
+        0% {transform: translateX(0)}
+        100% {transform: translateX(200%)}
     }
     .icons{
         justify-content: center;
@@ -93,7 +140,6 @@ const LandingPageStyled = styled.header`
         font-size: clamp(1.5rem,3vw + 1rem,4rem);
         color: var(--primary-color);
         position: relative;
-        /* width: max-content; */
         .name{
             text-align:center;
             font-size: 3rem;
@@ -111,13 +157,6 @@ const LandingPageStyled = styled.header`
         position: absolute;
     }
 
-    .name::before{
-         /* background-image: avatar; */
-        /* background:var(--background-dark-color); */
-        background:var(--border-color);
-        animation: typewriter var(--typewriterSpeed) forwards;
-    }
-
     .avatar{
         width: max-content;
         border-color: var(--border-color);
@@ -125,7 +164,7 @@ const LandingPageStyled = styled.header`
         padding: 1rem 0;
         transition-delay: 2s;  
         animation: 3s fadeIn;
-        animation: float 3s infinite normal ease-in-out;
+        animation: float 2.5s infinite normal ease-in-out;
         img{
             width: 16%;
             border-radius: 50%;
@@ -145,11 +184,6 @@ const LandingPageStyled = styled.header`
         }
     }   
 
-    @keyframes typewriter{
-        to {
-            left: 100%
-        }
-    }
     @keyframes fadeIn {
         99% {
             visibility: hidden;

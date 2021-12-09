@@ -29,6 +29,10 @@ function App() {
 }
 
 const MainContentStyled = styled.main`
+section{
+  /* padding: 2rem; */
+  /* outline: red solid 1px; */
+}
   
 .lines{
   position: absolute;

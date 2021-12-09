@@ -50,7 +50,7 @@ export const ResumeView = () => {
 
 const ResumeViewStyled = styled.header`
     width: 100%;
-    height: 100vh;
+    height: max-content;
     .smalltitle{
         padding: 2rem 0;
     }    

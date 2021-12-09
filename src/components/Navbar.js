@@ -103,17 +103,16 @@ const NavbarStyled = styled.nav`
     justify-content: center;
     
     .navbar ul{
-        /* border-radius:25px ; */
+        border-radius:25px ;
         flex-wrap: wrap;
         display: flex;
         list-style: none;
-        width: 100vh;
+        width: 100%;
         justify-content:center;
         transition: all .4s ease-in-out;
         &:hover{
             color: var(--white-color) ;
             background-color: var(--background-dark-color);
-
             }
         }       
     .navbar ul li{
@@ -123,11 +122,8 @@ const NavbarStyled = styled.nav`
         a{
             text-decoration: none;
             transition: .4s ease-in-out;
-            &:hover{
-                /* color: var(--primary-color); */
         }
     }
-}
 
 .nav-item {
     position: relative;
@@ -150,6 +146,6 @@ const NavbarStyled = styled.nav`
     opacity: 1;
     background: var(--primary-color);
 }
-        `
+`
 
 export default Navbar

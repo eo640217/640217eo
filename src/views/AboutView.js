@@ -21,12 +21,12 @@ export const AboutView = () => {
 
                     <h4>I am <span>Emmanuel</span></h4>
                     <p className="paragraph">
-                        I am currently a 4th-year Computer Science Honours student at Carleton University,
+                        <strong>I</strong> am currently a 4th-year Computer Science Honours student at Carleton University,
                         specializing in Business and Systems Management. My interest in computer science sparked when I began gaming
-                        and video editing.<br /><br />Computer science has since allowed me to tap into multiple sub-industries within the tech
-                        realm and allowed me to grow an understanding of what goes on within a program.<br /><br />Over the course of my degree,
+                        and video editing.<br /><strong>C</strong>omputer science has since allowed me to tap into multiple sub-industries within the tech
+                        realm and allowed me to grow an understanding of what goes on within a program.<br /><strong>O</strong>ver the course of my degree,
                         I learned languages such as Swift, Python, JavaScript, Java, C/C++, Prolog, SQL, Kotlin as well as work with
-                        WebDriverIO, Node.js, React, JSON, CSS, MongoDB, PostgreSQL, Redux, Jupyter and Git.<br /><br />Programming is a skill
+                        WebDriverIO, Node.js, React, JSON, CSS, MongoDB, PostgreSQL, Redux, Jupyter and Git.<br /><strong>P</strong>rogramming is a skill
                         I have a passion for, especially due to my enjoyment of problem-solving.So, I am always looking to sharpen
                         my skills in the field.
                     </p>
@@ -56,6 +56,9 @@ export const AboutView = () => {
 const AboutStyled = styled.section`
 display: flex;
 margin-top: 5rem;
+strong{
+    color: var(--primary-color);
+}
 @media screen and (max-width:1000px){
         flex-direction: column;
         .left-content{
@@ -98,8 +101,9 @@ margin-top: 5rem;
     }
 }
 .left-content{
-        width: 100%;
-        vertical-align: middle;
+        width: max-content;
+        /* vertical-align: middle; */
+        padding: 1rem 0;
         img{
             display: block;
             margin-left: auto;
