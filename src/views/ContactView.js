@@ -8,6 +8,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import PrimaryButton from '../components/PrimaryButton';
 
+
 export const ContactView = () => {
     const phone = <PhoneIcon />;
     const location = <LocationOnIcon />;
@@ -92,7 +93,7 @@ const ContactViewStyled = styled.section`
                 label{
                     position: absolute;
                     left: 20px;
-                    top: -30px;
+                    top: -20px;
                     display: inline-block;
                     background-color: var(--background-dark-color);
                     padding:0 .5rem;
@@ -113,11 +114,11 @@ const ContactViewStyled = styled.section`
                     border: 1px solid var(--border-color);
                     outline: none;
                     color: inherit;
-                    width: 100%;
+                    width: 100%; 
                     padding: .8rem 1rem;
                 }     
             }
             
         }
     }
-    `
+    `;

@@ -1,19 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Particle from '../components/Particle';
 import { Title } from '../components/Title';
 import { InnerLayout, MainLayout } from '../styles/Layouts';
-import projects from '../data/projects'
+import projectsData from '../data/projects'
 import Project from '../components/Project'
+import Button from '../components/Button';
 
+const allButtons = ['All', ...new Set(projectsData.map(item => item.side))];
 
 
 export const ProjectsView = () => {
+    const [projects, setProjects] = useState(projectsData);
+    const [button, setButtons] = useState(allButtons);
+
+    const filter = (button) => {
+        if (button === 'All') {
+            setProjects(projectsData);
+            return;
+        }
+        const filteredData = projectsData.filter(item => item.side === button);
+        setProjects(filteredData);
+    }
+
+
     return (
         <ProjectsViewStyled>
             <MainLayout>
                 <InnerLayout>
                     <Title title={'Projects'} span={'Projects'} />
+                    <div className='buttons'>
+                        <Button filter={filter} button={button} />
+                    </div>
                     <div className="projects">
                         {projects.map((project) => (
                             <div className='project'>
@@ -33,6 +51,7 @@ const ProjectsViewStyled = styled.header`
     border: 0;
     margin: 0;
     padding: 0;
+    cursor: default;
 
     @media(min-width: 540px){
     .projects{
@@ -57,7 +76,7 @@ const ProjectsViewStyled = styled.header`
     .project{
         transition: 0.4s;
         transform: scale(1.05) translateZ(0);
-    }    
+    }
     
     .projects:hover > .project:not(:hover){
         opacity:0.4;

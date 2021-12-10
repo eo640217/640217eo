@@ -9,6 +9,7 @@ const Project = ({ project }) => {
             <div className='card'>
                 <div className='card-image'>
                     <img src={project.image} alt={project.name} />
+                    <div className='header-title'>{project.name}</div>
                 </div>
                 <div className='card-overlay'>
                     <div className='card-header'>
@@ -18,7 +19,7 @@ const Project = ({ project }) => {
                         <img className="card-thumb" src={project.image} alt="" />
                         <div className="card-header-text">
                             <a href={project.liveLink}>
-                                <h3 className="card-title">{project.name}</h3>
+                                <h1 className="card-title">{project.name}</h1>
                             </a>
                             <span className="card-status">{project.year}</span>
                         </div>
@@ -44,6 +45,7 @@ const ProjectComponentStyled = styled.div`
     border-radius: calc(var(--curve) * 1px);
     overflow: hidden;
     text-decoration: none;
+    
 }
 .card-image {      
     width: 100%;
@@ -52,7 +54,7 @@ const ProjectComponentStyled = styled.div`
     background-position: center;
     border-radius: var(--spacing-l);
     bottom: 0;
-    filter: brightness(0.75) saturate(1.2) contrast(0.85);
+    filter: brightness(1) saturate(1.2) contrast(0.85);
     left: 0;
     right: 0;
     top: 0;
@@ -61,10 +63,21 @@ const ProjectComponentStyled = styled.div`
     transition: 
         filter 200ms linear,
         transform 200ms linear;
+    .header-title{
+        transition:0.2s ease-out;
+        position: absolute;
+        text-transform: uppercase;
+        top: 15px;
+        left: 26px;
+        font-family: 'Montserrat', sans-serif;
+        color: var(--white-color);
+        font-size: 1.3rem;
+        text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+        line-height: 1.4;
+        word-spacing: 100vw;
+        font-family: 'Montserrat', sans-serif;
+    }
 
-}
-.card-image:hover{
-    transform: scale(1.05) translateZ(0);
 }
 
 .card-overlay {
@@ -101,8 +114,17 @@ const ProjectComponentStyled = styled.div`
     fill: var(--background-dark-color);
     /* width: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z"); */
 }  
-.card:hover .card-header {
-    transform: translateY(0);
+.card:hover{
+    .card-header {
+        transform: translateY(0);
+    }
+    .header-title{
+        transition: all 0.2s ease-in-out;
+        opacity: 0;
+    }
+    .card-image{
+        transform: scale(1.05) translateZ(0);
+    }
 }
 
 .card-thumb {
@@ -135,7 +157,7 @@ const ProjectComponentStyled = styled.div`
     /* text-align: justify; */
     padding: 0 1em 2em;
     margin: 0;
-    color: #D7BDCA;
+    color: var(--white-color);
     font-family: "MockFlowFont";   
     display: -webkit-box;
     -webkit-box-orient: vertical;

@@ -23,10 +23,10 @@ export const AboutView = () => {
                     <p className="paragraph">
                         <strong>I</strong> am currently a 4th-year Computer Science Honours student at Carleton University,
                         specializing in Business and Systems Management. My interest in computer science sparked when I began gaming
-                        and video editing.<br /><strong>C</strong>omputer science has since allowed me to tap into multiple sub-industries within the tech
-                        realm and allowed me to grow an understanding of what goes on within a program.<br /><strong>O</strong>ver the course of my degree,
+                        and video editing.<br /><br /><strong>C</strong>omputer science has since allowed me to tap into multiple sub-industries within the tech
+                        realm and allowed me to grow an understanding of what goes on within a program.<br /><br /><strong>O</strong>ver the course of my degree,
                         I learned languages such as Swift, Python, JavaScript, Java, C/C++, Prolog, SQL, Kotlin as well as work with
-                        WebDriverIO, Node.js, React, JSON, CSS, MongoDB, PostgreSQL, Redux, Jupyter and Git.<br /><strong>P</strong>rogramming is a skill
+                        WebDriverIO, Node.js, React, JSON, CSS, MongoDB, PostgreSQL, Redux, Jupyter and Git.<br /><br /><strong>P</strong>rogramming is a skill
                         I have a passion for, especially due to my enjoyment of problem-solving.So, I am always looking to sharpen
                         my skills in the field.
                     </p>
@@ -56,6 +56,7 @@ export const AboutView = () => {
 const AboutStyled = styled.section`
 display: flex;
 margin-top: 5rem;
+height: 70vh;
 strong{
     color: var(--primary-color);
 }
@@ -95,10 +96,11 @@ strong{
         }
     }
     .paragraph{
-        font-size: 0.85rem;
+        font-size: 1rem;
         padding: 1rem 0;
         color: var(--white-color);
-        text-align: justify;        
+        text-align: justify;    
+        line-height: 1.4;
     }
 }
 .left-content{

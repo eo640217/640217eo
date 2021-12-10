@@ -32,26 +32,46 @@ const GlobalStyle = createGlobalStyle`
         --spacing-xl: 32px;
         --spacing-xxl: 64px;
         --width-container: 1200px;
+
+        //---- CONTACT STYLES ----//
+        --bg: #dcdde1;     
+        --color-icon: #535c68;  
+        --social-icon1: #e4405f;
+        --social-icon2: #3b5999;
+        --social-icon3: #e4405f;
+        --social-icon4: #cd201f;
+        --social-icon5: #0077B5;
+    
     }
     *{
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-        font-family: 'Martel', sans-serif;
+        font-family: 'Montserrat','Martel', sans-serif;
         list-style: none;
         text-decoration: none;
         font-size: 1.2rem;
-
     }
     body{
         background-color: var(--background-dark-color);
         color: var(--font-light-color);
+        animation: transitionIn 0.75s ;
     }
     a{
         font-family: inherit;
         color: inherit;
         font-size: inherit;
     }
+    @keyframes transitionIn {
+    from{
+        opacity: 0;
+        /* transform: rotateX(-10deg); */
+    }
+    to{
+        opacity: 1;
+        /* transform: rotateX(0deg); */
+    }
+}
     
     `;
 export default GlobalStyle

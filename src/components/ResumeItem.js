@@ -44,7 +44,6 @@ display: flex;
         }
         p{
             display: inline-block;
-            font-size: 1rem;
         }
         
     }
@@ -62,8 +61,7 @@ display: flex;
         }
         h5{
             color: var(--primary-color);
-            font-size: 1.1rem;
-            /* padding-bottom: 0.4rem; */
+
         }
         h6{
             padding-bottom: 0.4rem;
@@ -71,9 +69,11 @@ display: flex;
             color: var(--white-color);
         }
         p{
-            font-size:0.9rem;
+            font-size:1rem;
             padding-bottom: 0.4rem;
-            text-align: justify;        
+            text-align: justify; 
+            line-height: 1.4;
+
         }
     }
 `;

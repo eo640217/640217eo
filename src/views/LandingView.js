@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import LinkedinIcon from '@material-ui/icons/LinkedIn'
 import GithubIcon from '@material-ui/icons/GitHub'
 import avatar from '../images/avatar.jpg'
+import { Link, animateScroll as scroll } from "react-scroll";
+
 
 
 export const Landing = () => {
@@ -39,13 +41,22 @@ export const Landing = () => {
                             <LinkedinIcon />
                         </a>
                     </div>
-                    <div className='chev-con'>
-                        <div class="chevrons">
-                            <div class="chevron"></div>
-                            <div class="chevron"></div>
-                            <div class="chevron"></div>
+                    <Link
+                        activeClass="active"
+                        to="projects"
+                        spy={true}
+                        smooth={true}
+                        offset={0}
+                        duration={500}
+                    >
+                        <div className='chev-con'>
+                            <div class="chevrons">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </LandingPageStyled>
@@ -53,46 +64,47 @@ export const Landing = () => {
 }
 
 const LandingPageStyled = styled.header`
+
+width: 100%;
+height: 90vh;
+position: relative;
+
+
+.particles-con{
+    position: absolute;
+    text-align:center;
+    height: 100%;
     width: 100%;
-    height: 100vh;
-    position: relative;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
     
+}
 
-    .particles-con{
-        position: absolute;
-        text-align:center;
-        height: 100%;
-        width: 100%;
-        top: 50%;
-        left: 50%;
-        color: white;
-        transform: translate(-50%, -50%);
-
+.typography{        
+    position: absolute;
+    text-align:center;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    .name{
+        position: relative;
+        overflow: hidden;
+        display: block;
+        line-height: 1.2;
     }
-    
-    .typography{        
+    .name::after{
+        content: '';
         position: absolute;
-        text-align:center;
-        top: 50%;
-        left: 50%;
-        color: white;
-        transform: translate(-50%, -50%);
-        .name{
-            position: relative;
-            overflow: hidden;
-            display: block;
-            line-height: 1.2;
-        }
-        .name::after{
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--white-color);
-            border-right: red;
-            animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--white-color);
+        border-right: red;
+        animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
             transform: translateX(-101%);
         }
         .name::before{
@@ -106,7 +118,7 @@ const LandingPageStyled = styled.header`
             animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
             transform: translateX(0);
         }
-
+        
         .name:nth-of-type(1)::before,.name:nth-of-type(1)::after{
             animation-delay: 1s;
         }
@@ -120,7 +132,7 @@ const LandingPageStyled = styled.header`
         0% {transform: translateX(-100%)}
         100% {transform: translateX(101%)}
     }
-
+    
     @keyframes a-ltr-before{
         0% {transform: translateX(0)}
         100% {transform: translateX(200%)}
@@ -148,7 +160,7 @@ const LandingPageStyled = styled.header`
             align-items: center;
         }
     }
-
+    
     .name::before, .name::after{
         content: '';
         top: 0;
@@ -157,7 +169,7 @@ const LandingPageStyled = styled.header`
         left: 0;
         position: absolute;
     }
-
+    
     .avatar{
         width: max-content;
         border-color: var(--border-color);
@@ -172,10 +184,10 @@ const LandingPageStyled = styled.header`
             border: 8px solid var(--border-color);
         }
     }
-
+    
     @keyframes float {
         0% {
-        top:-10px;
+            top:-10px;
         }
         50% {
             top: 5px;
@@ -202,14 +214,15 @@ const LandingPageStyled = styled.header`
     .chev-con{
         display: flex;
         justify-content: center;
+        cursor: pointer;
     }
-
+    
     .chevrons {
         position: relative;
         width: 28px;
         height: 24px;
     }
-
+    
     .chevron {
         position: absolute;
         width: 28px;
@@ -218,37 +231,37 @@ const LandingPageStyled = styled.header`
         transform: scale3d(0.5, 0.5, 0.5);
         animation: move 3s ease-out infinite;
     }
-
+    
     .chevron:first-child {
-    animation: move 3s ease-out 1s infinite;
+        animation: move 3s ease-out 1s infinite;
     }
-
+    
     .chevron:nth-child(2) {
-    animation: move 3s ease-out 2s infinite;
+        animation: move 3s ease-out 2s infinite;
     }
-
+    
     .chevron:before,
     .chevron:after {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 51%;
+        content: ' ';
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 51%;
     background: #fff;
-    }
+}
 
-    .chevron:before {
+.chevron:before {
     left: 0;
     transform: skew(0deg, 30deg);
-    }
+}
 
-    .chevron:after {
+.chevron:after {
     right: 0;
     width: 50%;
     transform: skew(0deg, -30deg);
-    }
+}
 
-    @keyframes move {
+@keyframes move {
     25% {
         opacity: 1;
     }
@@ -264,13 +277,13 @@ const LandingPageStyled = styled.header`
         opacity: 0;
         transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
     }
-    }
+}
 
-    @keyframes pulse {
-        to {
-            opacity: 1;
-        }
+@keyframes pulse {
+    to {
+        opacity: 1;
     }
+}
 
 .card {
     position: relative;
@@ -287,7 +300,7 @@ const LandingPageStyled = styled.header`
     position: relative;
     overflow: hidden;
     width: 100%;
-
+    
 }
 .scroller > span {
     position: relative;
@@ -310,5 +323,5 @@ const LandingPageStyled = styled.header`
         top: -3.6em;
     }
 }
-
 `;
+
