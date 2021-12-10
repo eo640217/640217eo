@@ -1,6 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
 import Particles from "react-tsparticles";
-import styled from 'styled-components';
 
 function Particle({ value, type }) {
     return (

@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { MainLayout } from '../styles/Layouts'
 import { Title } from '../components/Title'
-import ImageSection from '../components/ImageSection'
 import image from '../images/avatar.jpg'
 
 
@@ -15,7 +14,7 @@ export const AboutView = () => {
             <AboutStyled>
 
                 <div className="left-content">
-                    <img src={image} alt="about image" />
+                    <img src={image} alt="about" />
                 </div>
                 <div className="right-content">
 

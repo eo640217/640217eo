@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import LinkedinIcon from '@material-ui/icons/LinkedIn'
 import GithubIcon from '@material-ui/icons/GitHub'
 import avatar from '../images/avatar.jpg'
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 
 
@@ -34,10 +34,10 @@ export const Landing = () => {
                         Welcome to my portfolio!
                     </p>
                     <div className='icons'>
-                        <a href='https://github.com/eo640217' target="_blank" id="Github" className="icon i-github">
+                        <a href='https://github.com/eo640217' rel="noopener noreferrer" target="_blank" id="Github" className="icon i-github">
                             <GithubIcon />
                         </a>
-                        <a href='https://www.linkedin.com/in/emmanuel-olufelo-70775420b/' target="_blank" id="Linkedin" className="icon i-linkedin">
+                        <a href='https://www.linkedin.com/in/emmanuel-olufelo-70775420b/' rel="noopener noreferrer" target="_blank" id="Linkedin" className="icon i-linkedin">
                             <LinkedinIcon />
                         </a>
                     </div>

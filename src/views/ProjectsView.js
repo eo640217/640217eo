@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import Particle from '../components/Particle';
 import { Title } from '../components/Title';
 import { InnerLayout, MainLayout } from '../styles/Layouts';
 import projectsData from '../data/projects'
