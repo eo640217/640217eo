@@ -47,7 +47,7 @@ const ProjectComponentStyled = styled.div`
     
 }
 .card-image {      
-    width: 100%;
+    width: 10%;
     height: auto;
     background-size: cover;
     background-position: center;

@@ -5,70 +5,75 @@ import LinkedinIcon from '@material-ui/icons/LinkedIn'
 import GithubIcon from '@material-ui/icons/GitHub'
 import avatar from '../images/avatar.jpg'
 import { Link } from "react-scroll";
+import { InnerLayout, MainLayout } from '../styles/Layouts';
 
 
 
 export const Landing = () => {
     return (
         <LandingPageStyled>
-            <div className='landing-con'>
-                <div className='particles-con'>
-                    <Particle value={24} type={"triangle"} />
-                </div>
-                <div className='typography'>
-                    <h1>Hello World, I'm<br /> <span><h1 className='name'>Emmanuel Olufelo.</h1></span></h1>
-                    <div class="card">
-                        <div class="scroller">
-                            <span>
-                                Software Engineer<br />
-                                Data Analyst<br />
-                                Full Stack Developer<br />
-                                Freelance
-                            </span>
-                        </div>
+            <MainLayout >
+                <div className='landing-con'>
+                    <div className='particles-con'>
+                        <Particle value={24} type={"triangle"} />
                     </div>
-                    <div className="avatar">
-                        <img src={avatar} alt="avatar" />
-                    </div>
-                    <p className='subtitle'>
-                        Welcome to my portfolio!
-                    </p>
-                    <div className='icons'>
-                        <a href='https://github.com/eo640217' rel="noopener noreferrer" target="_blank" id="Github" className="icon i-github">
-                            <GithubIcon />
-                        </a>
-                        <a href='https://www.linkedin.com/in/emmanuel-olufelo-70775420b/' rel="noopener noreferrer" target="_blank" id="Linkedin" className="icon i-linkedin">
-                            <LinkedinIcon />
-                        </a>
-                    </div>
-                    <Link
-                        activeClass="active"
-                        to="projects"
-                        spy={true}
-                        smooth={true}
-                        offset={0}
-                        duration={500}
-                    >
-                        <div className='chev-con'>
-                            <div class="chevrons">
-                                <div class="chevron"></div>
-                                <div class="chevron"></div>
-                                <div class="chevron"></div>
+                    <div className='typography'>
+                        <h1>Hello World, I'm<br /> <span><h1 className='name'>Emmanuel Olufelo.</h1></span></h1>
+                        <div class="card">
+                            <div class="scroller">
+                                <span>
+                                    Software Engineer<br />
+                                    Data Analyst<br />
+                                    Full Stack Developer<br />
+                                    Freelance
+                                </span>
                             </div>
                         </div>
-                    </Link>
+                        <div className="avatar">
+                            <img src={avatar} alt="avatar" />
+                        </div>
+                        <p className='subtitle'>
+                            Welcome to my portfolio!
+                        </p>
+                        <div className='icons'>
+                            <a href='https://github.com/eo640217' rel="noopener noreferrer" target="_blank" id="Github" className="icon i-github">
+                                <GithubIcon />
+                            </a>
+                            <a href='https://www.linkedin.com/in/emmanuel-olufelo-70775420b/' rel="noopener noreferrer" target="_blank" id="Linkedin" className="icon i-linkedin">
+                                <LinkedinIcon />
+                            </a>
+                        </div>
+                        <Link
+                            activeClass="active"
+                            to="projects"
+                            spy={true}
+                            smooth={true}
+                            offset={200}
+                            duration={500}
+                        >
+                            <div className='chev-con'>
+                                <div class="chevrons">
+                                    <div class="chevron"></div>
+                                    <div class="chevron"></div>
+                                    <div class="chevron"></div>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
                 </div>
-            </div>
+            </MainLayout>
         </LandingPageStyled>
     )
 }
 
 const LandingPageStyled = styled.header`
 
-width: 100%;
-height: 90vh;
-position: relative;
-
+.landing-con{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+}
 
 .particles-con{
     position: absolute;
@@ -82,13 +87,13 @@ position: relative;
     
 }
 
-.typography{        
+.typography{ 
+    /* outline: 1px red solid; */
     position: absolute;
     text-align:center;
-    top: 50%;
-    left: 50%;
-    color: white;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    height: max-content;
+    margin: auto;
     .name{
         position: relative;
         overflow: hidden;
@@ -128,16 +133,8 @@ position: relative;
             animation-delay: 1.5s;
         }
     }
-    @keyframes a-ltr-after{
-        0% {transform: translateX(-100%)}
-        100% {transform: translateX(101%)}
-    }
-    
-    @keyframes a-ltr-before{
-        0% {transform: translateX(0)}
-        100% {transform: translateX(200%)}
-    }
     .icons{
+
         justify-content: center;
         display: flex;
         .icon{
@@ -171,7 +168,6 @@ position: relative;
     }
     
     .avatar{
-        width: max-content;
         border-color: var(--border-color);
         position: relative;
         padding: 1rem 0;
@@ -180,6 +176,7 @@ position: relative;
         animation: float 2.5s infinite normal ease-in-out;
         img{
             width: 16%;
+            height: max-content;
             border-radius: 50%;
             border: 8px solid var(--border-color);
         }
@@ -206,12 +203,23 @@ position: relative;
         }
     }
 
+    @keyframes a-ltr-after{
+        0% {transform: translateX(-100%)}
+        100% {transform: translateX(101%)}
+    }
+    
+    @keyframes a-ltr-before{
+        0% {transform: translateX(0)}
+        100% {transform: translateX(200%)}
+    }
+
     @media(min-width:1200px){
         h1{
             font-size: 2rem;
         }
     }
     .chev-con{
+
         display: flex;
         justify-content: center;
         cursor: pointer;
@@ -292,14 +300,16 @@ position: relative;
     /* text-align: center */
 }
 
-/* Scroller styling */
 .scroller {
+
     height: 1.2em;
     line-height: 1.2em;
     text-align:center;
     position: relative;
     overflow: hidden;
     width: 100%;
+
+
     
 }
 .scroller > span {

@@ -66,7 +66,7 @@ const ProjectsViewStyled = styled.header`
     
     .projects{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(150px, 4fr));
         gap: 2rem;
         margin: 4rem 5vw;
         padding: 0;

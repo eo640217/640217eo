@@ -73,5 +73,15 @@ margin: 2rem 5vw;
 padding: 0;
 list-style-type: none;
 text-align: center;
+
+@media(min-width: 540px){
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 60%;     
+}
+
+@media(min-width: 960px){ 
+    grid-template-columns: repeat(4, 1fr); 
+} 
+
 `;
 export default Button

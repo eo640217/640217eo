@@ -6,92 +6,90 @@ import { InnerLayout } from '../styles/Layouts';
 
 const Navbar = () => {
     return (
-        <InnerLayout>
-            <NavbarStyled>
-                <div className="nav-container">
-                    <nav className="navbar">
-                        <ul>
-                            <li className="nav-item">
-                                <Link
-                                    activeClass="active"
-                                    to="projects"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={0}
-                                    duration={500}
-                                >
-                                    Projects
+        <NavbarStyled>
+            <div className="nav-container">
+                <nav className="navbar">
+                    <ul>
+                        <li className="nav-item">
+                            <Link
+                                activeClass="active"
+                                to="projects"
+                                spy={true}
+                                smooth={true}
+                                offset={200}
+                                duration={500}
+                            >
+                                Projects
 
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link
-                                    activeClass="active"
-                                    to="skills"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={0}
-                                    duration={500}
-                                >
-                                    Skills
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                                activeClass="active"
+                                to="skills"
+                                spy={true}
+                                smooth={true}
+                                offset={0}
+                                duration={500}
+                            >
+                                Skills
 
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link
-                                    activeClass="active"
-                                    to="resume"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={0}
-                                    duration={500}
-                                >
-                                    Resume
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                                activeClass="active"
+                                to="resume"
+                                spy={true}
+                                smooth={true}
+                                offset={0}
+                                duration={500}
+                            >
+                                Resume
 
-                                </Link>
-                            </li><li className="nav-item">
-                                <Link
-                                    activeClass="active"
-                                    to="about"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={0}
-                                    duration={500}
-                                >
-                                    About
+                            </Link>
+                        </li><li className="nav-item">
+                            <Link
+                                activeClass="active"
+                                to="about"
+                                spy={true}
+                                smooth={true}
+                                offset={0}
+                                duration={500}
+                            >
+                                About
 
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link
-                                    activeClass="active"
-                                    to="contact"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={0}
-                                    duration={500}
-                                >
-                                    Contact
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                                activeClass="active"
+                                to="contact"
+                                spy={true}
+                                smooth={true}
+                                offset={0}
+                                duration={500}
+                            >
+                                Contact
 
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link
-                                    activeClass="active"
-                                    to="landing"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={0}
-                                    duration={500}
-                                >
-                                    <RestartAltIcon />
-                                </Link>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </NavbarStyled>
-        </InnerLayout>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                                activeClass="active"
+                                to="landing"
+                                spy={true}
+                                smooth={true}
+                                offset={0}
+                                duration={500}
+                            >
+                                <RestartAltIcon />
+                            </Link>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </NavbarStyled>
     )
 }
 const NavbarStyled = styled.nav`
