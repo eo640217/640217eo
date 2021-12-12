@@ -1,31 +1,34 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const Skill = ({ title, image }) => {
-    return (
-        <SkillStyled>
-            <div className='image-content'>
-                {title}
-            </div>
-            <div className='title-content'>
-                {title}
-            </div>
-
-        </SkillStyled>
-    )
-}
+  return (
+    <SkillStyled>
+      <div className="image-content">
+        <img src={image} />
+      </div>
+      <div className="title-content">
+        <span>{title}</span>
+      </div>
+    </SkillStyled>
+  );
+};
 const SkillStyled = styled.div`
-width: 20px;
-height: 20px;
-/* *{outline: 1px red solid;} */
-text-align: center;
-justify-content: center;
-align-items: center;
-.top-content{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
 
-}
-
+  span {
+    font-size: clamp(0.5rem, 1vw + 1rem, 1rem);
+  }
+  .image-content,
+  .title-content {
+    width: 100%;
+    justify-content: center;
+  }
 `;
 
-export default Skill
-
+export default Skill;

@@ -51,6 +51,9 @@ const GlobalStyle = createGlobalStyle`
         list-style: none;
         text-decoration: none;
         font-size: 1.2rem;
+        p{
+        font-family: 'Open Sans', 'Montserrat','Martel',  'sans-serif';
+        }
     }
     body{
         background-color: var(--background-dark-color);
@@ -74,4 +77,4 @@ const GlobalStyle = createGlobalStyle`
 }
     
     `;
-export default GlobalStyle
+export default GlobalStyle;
