@@ -60,8 +60,8 @@ export const ResumeView = () => {
 };
 
 const ResumeViewStyled = styled.header`
-  width: 100%;
   height: max-content;
+  width: 100%;
   .smalltitle {
     padding: 2rem 0;
   }
