@@ -56,6 +56,7 @@ const ProjectComponentStyled = styled.div`
     transform: scale(1) translateZ(0), translateX(-50%);
     transition: filter 200ms linear, transform 200ms linear;
     .header-title {
+      font-weight: 700;
       transition: 0.2s ease-out;
       position: absolute;
       text-transform: uppercase;

@@ -23,7 +23,7 @@ export const ResumeView = () => {
               title={"Sports Data Analyst Intern"}
               subtitle={"Canadian Tire"}
               description={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+                "Building and maintaining large sport performance databases using automated data collection tools.\n Use Python to data mine large quantities of historical Olympic and senior-level performance data. Create statistical models and performance metrics to evaluate future athlete potential, Develop interactive tools/dashboards for Canadian Sport Organizations.  "
               }
               year={"Jan 2022 -"}
             />
@@ -48,7 +48,7 @@ export const ResumeView = () => {
               title={"BSC Computer Science"}
               subtitle={"Carleton University"}
               description={
-                "Over the course of my degree, I have learned, languages such as Swift, Python, JavaScript, Java, C/C++, Prolog, SQL, Kotlin as well as work with WebDriverIO, Node.js, React, JSON, CSS, MongoDB, PostgreSQL, Redux, Jupyter and Git."
+                "Over the course of my degree, not only did I learn how to code but also theory behind it. Data structures, (linked lists, binary trees, dictionaries, etc), useful algorithms (e.g. Dijkstra's algorithm), the ways data is stored and interpreted at the bit and byte level , code design patterns, parallel programming & many more skills that has set me up for the rest of my career.  "
               }
               year={"Sept 2017 - Apr 2022"}
             />

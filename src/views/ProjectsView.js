@@ -35,6 +35,7 @@ export const ProjectsView = () => {
             </div>
           ))}
         </div>
+        <p>Skills grow.. and so will this portfolio..</p>
       </MainLayout>
     </ProjectsViewStyled>
   );
@@ -48,6 +49,9 @@ const ProjectsViewStyled = styled.header`
   margin: 0;
   padding: 0;
   cursor: default;
+  p {
+    opacity: 0.4;
+  }
 
   @media (min-width: 540px) {
     .projects {

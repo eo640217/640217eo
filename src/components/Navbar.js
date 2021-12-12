@@ -118,6 +118,7 @@ const NavbarStyled = styled.nav`
   .navbar ul li {
     padding: 1rem;
     margin: 0 1rem;
+    font-weight: 700;
     cursor: pointer;
     a {
       transition: 0.4s ease-in-out;

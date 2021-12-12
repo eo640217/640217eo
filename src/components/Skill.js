@@ -23,6 +23,7 @@ const SkillStyled = styled.div`
 
   span {
     font-size: clamp(0.5rem, 1vw + 1rem, 1rem);
+    font-weight: 700;
   }
   .image-content,
   .title-content {

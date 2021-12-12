@@ -17,7 +17,6 @@ const ResumeItem = ({ year, title, subtitle, description }) => {
 };
 const ResumeItemStyled = styled.div`
   display: flex;
-
   p,
   h5,
   h6 {
@@ -29,11 +28,11 @@ const ResumeItemStyled = styled.div`
   }
 
   .left-content {
-    width: 50%;
+    max-width: 16ch;
+    min-width: 8ch;
 
     padding-left: 20px;
     position: relative;
-    outline: 1px solid red;
 
     &::before {
       content: "";
@@ -47,7 +46,6 @@ const ResumeItemStyled = styled.div`
       background-color: var(--background-dark-color);
     }
     p {
-      width: 1rem;
       display: inline-block;
     }
   }

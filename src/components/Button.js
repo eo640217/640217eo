@@ -16,6 +16,7 @@ const Button = ({ filter, button }) => {
 };
 const ButtonStyled = styled.button`
   border-radius: 10px;
+  font-weight: 700;
   background-color: var(--background-dark-color);
   border: none;
   transition: 0.2s ease-out;

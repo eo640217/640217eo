@@ -51,28 +51,18 @@ const GlobalStyle = createGlobalStyle`
         list-style: none;
         text-decoration: none;
         font-size: 1.2rem;
-        p{
-        font-family: 'Open Sans', 'Montserrat','Martel',  'sans-serif';
-        }
     }
     body{
         background-color: var(--background-dark-color);
         color: var(--font-light-color);
-        animation: transitionIn 0.75s ;
     }
     a{
         font-family: inherit;
         color: inherit;
         font-size: inherit;
     }
-    @keyframes transitionIn {
-    from{
-        opacity: 0;
-        /* transform: rotateX(-10deg); */
-    }
-    to{
-        opacity: 1;
-        /* transform: rotateX(0deg); */
+    h1,h2,h3,h4,h5{
+        font-weight:700;
     }
 }
     
