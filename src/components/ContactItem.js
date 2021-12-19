@@ -19,13 +19,15 @@ const ContactItemStyled = styled.div`
   background-color: var(--background-dark-grey);
   display: flex;
   height: max-content;
-  width: 100%;
+  width: 400px;
   align-items: center;
-  /* outline: red solid 1px; */
   &:not(:last-child) {
     margin-bottom: 2.5rem;
   }
   .right-content {
+    text-align: center;
+    width: 100%;
+
     span {
       transition: all 0.4s ease-in-out;
       font-size: 1rem;

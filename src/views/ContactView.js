@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { MainLayout, InnerLayout } from "../styles/Layouts";
 import { Title } from "../components/Title";
@@ -10,16 +10,44 @@ import PrimaryButton from "../components/PrimaryButton";
 import LinkedinIcon from "@material-ui/icons/LinkedIn";
 import GithubIcon from "@material-ui/icons/GitHub";
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
 export const ContactView = () => {
-  const phone = <PhoneIcon />;
-  const location = <LocationOnIcon />;
-  const email = <EmailIcon />;
+  const phoneIcon = <PhoneIcon />;
+  const locationIcon = <LocationOnIcon />;
+  const emailIcon = <EmailIcon />;
+
+  const [state, setState] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) =>
+    setState({ ...state, [e.target.name]: e.target.value });
+
+  const handleSubmit = (e) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contactForm", ...state }),
+    })
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
+    e.preventDefault();
+  };
+
   return (
     <MainLayout>
       <Title title="Contact" span="Contact" />
       <ContactViewStyled>
         <InnerLayout className="contact-section">
-          <div className="left-content">
+          {/* <div className="left-content">
             <div className="contact-title">
               <h4>Let's Get In Touch</h4>
             </div>
@@ -50,26 +78,26 @@ export const ContactView = () => {
                 <PrimaryButton title={"Send Email"} />
               </div>
             </form>
-          </div>
+          </div> */}
           <div className="right-content">
             <div className="contact-item">
               <ContactItem
                 title={"Email: "}
-                icon={email}
+                icon={emailIcon}
                 contact1={"eolufelo@gmail.com"}
               />
             </div>
             <div className="contact-item">
               <ContactItem
                 title={"Phone: "}
-                icon={phone}
+                icon={phoneIcon}
                 contact1={"647 283 9607"}
               />
             </div>
             <div className="contact-item">
               <ContactItem
                 title={"Location: "}
-                icon={location}
+                icon={locationIcon}
                 contact1={"Brampton, ON"}
               />
             </div>
@@ -103,7 +131,10 @@ export const ContactView = () => {
 const ContactViewStyled = styled.section`
   .contact-section {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    /* grid-template-columns: repeat(1, 1fr); */
     grid-column-gap: 2rem;
 
     .right-content {
@@ -112,8 +143,6 @@ const ContactViewStyled = styled.section`
       }
       .social-icons {
         display: flex;
-        margin-left: auto;
-        margin-right: auto;
         width: max-content;
         .icon {
           display: inline-block;
@@ -123,6 +152,11 @@ const ContactViewStyled = styled.section`
             color: var(--primary-color);
           }
         }
+      }
+      .contact-item,
+      .social-icons {
+        margin-left: auto;
+        margin-right: auto;
       }
     }
     .left-content {
