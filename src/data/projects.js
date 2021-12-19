@@ -4,8 +4,9 @@ export const projects = [
     id: "ces",
     image:
       "https://images.unsplash.com/photo-1615196405643-ed752315011c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-    liveLink: "",
-    repoLink: "https://github.com/martindmtrv/ces-device-simulator",
+    liveLink:
+      "https://drive.google.com/file/d/1BFUtsFfr_YjTBYcObUrNfKLs83SF2fAu/view?usp=sharing",
+    repoLink: "https://github.com/eo640217/device-simulator",
     description: "Device Simulator made in QT Creator ",
     documentation: "",
     year: "2021",
