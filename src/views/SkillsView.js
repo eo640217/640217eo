@@ -9,7 +9,6 @@ import skillsData from "../data/skills";
 export const SkillsView = () => {
   return (
     <SkillsViewStyled>
-      {/* <InnerLayout> */}
       <MainLayout>
         <Title title={"Skills"} span={"Skills"} />
         <div className="skills-grid">
@@ -19,7 +18,6 @@ export const SkillsView = () => {
             </div>
           ))}
         </div>
-        {/* </InnerLayout> */}
       </MainLayout>
     </SkillsViewStyled>
   );
@@ -27,7 +25,6 @@ export const SkillsView = () => {
 
 const SkillsViewStyled = styled.div`
   width: 100%;
-  /* min-height: 100vh; */
   height: max-content;
   border: 0;
   margin: 0;
@@ -42,13 +39,13 @@ const SkillsViewStyled = styled.div`
 
   @media (min-width: 960px) {
     .skills-grid {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 3fr));
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
     gap: 2rem;
     margin: 4rem 5vw;
     padding: 0;

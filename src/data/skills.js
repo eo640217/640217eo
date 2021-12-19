@@ -23,6 +23,20 @@ export const skills = [
     name: "C&C++",
     image: "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png",
   },
-  // { name: "C", image: "../images/Svgs/javascript.svg" },
+  { name: "Git", image: "https://img.icons8.com/color/48/000000/git.png" },
+  {
+    name: "Sql",
+    image: "https://img.icons8.com/color/48/000000/postgreesql.png",
+  },
+
+  {
+    name: "No Sql",
+    image: "https://img.icons8.com/color/48/000000/mongodb.png",
+  },
+
+  {
+    name: "Teamwork",
+    image: "https://img.icons8.com/color/48/000000/teamwork--v2.png",
+  },
 ];
 export default skills;
