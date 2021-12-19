@@ -78,5 +78,8 @@ const ButtonsStyled = styled.div`
   @media (min-width: 960px) {
     grid-template-columns: repeat(4, 1fr);
   }
+  @media (max-width: 380px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 export default Button;

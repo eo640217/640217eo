@@ -48,7 +48,7 @@ export const HomeView = () => {
         </section>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

@@ -21,8 +21,8 @@ export const Landing = () => {
               <h1 className="name">Emmanuel Olufelo.</h1>
             </span>
           </h1>
-          <div class="card">
-            <div class="scroller">
+          <div className="card">
+            <div className="scroller">
               <span>
                 Software Engineer
                 <br />
@@ -242,11 +242,6 @@ const LandingPageStyled = styled.header`
     }
   }
 
-  @media (min-width: 1200px) {
-    h1 {
-      font-size: 2rem;
-    }
-  }
   .chev-con {
     display: flex;
     cursor: pointer;
@@ -353,6 +348,23 @@ const LandingPageStyled = styled.header`
     }
     75% {
       top: -3.6em;
+    }
+  }
+
+  @media (max-width: 385px) {
+    .typography {
+      h1 {
+        .name {
+          font-size: clamp(1.5rem, 1vw + 1rem, 2rem);
+        }
+      }
+      .subtitle {
+      }
+      .scroller {
+        span {
+          font-weight: 100;
+        }
+      }
     }
   }
 `;

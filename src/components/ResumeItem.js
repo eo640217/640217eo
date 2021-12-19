@@ -74,5 +74,12 @@ const ResumeItemStyled = styled.div`
       line-height: 1.4;
     }
   }
+
+  @media (max-width: 540px) {
+    display: grid;
+    p {
+      font-size: clamp(0.8rem, 1vw + 0.3rem, 0.4rem);
+    }
+  }
 `;
 export default ResumeItem;

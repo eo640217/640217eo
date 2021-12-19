@@ -61,12 +61,7 @@ const AboutStyled = styled.section`
   strong {
     color: var(--primary-color);
   }
-  @media screen and (max-width: 1000px) {
-    flex-direction: column;
-    .left-content {
-      margin-bottom: 2rem;
-    }
-  }
+
   .right-content {
     padding: 0 2rem;
     .about-info {
@@ -93,6 +88,24 @@ const AboutStyled = styled.section`
       object-fit: cover;
       border-radius: 50%;
       max-width: 300px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    .left-content {
+      width: 100%;
+      img {
+        max-width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .right-content {
+      .paragraph,
+      p {
+        font-size: 75%;
+      }
     }
   }
 `;
