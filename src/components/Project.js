@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import GithubIcon from "@material-ui/icons/GitHub";
+import WebIcon from "@mui/icons-material/Web";
 
 const Project = ({ project }) => {
   return (
@@ -12,15 +14,38 @@ const Project = ({ project }) => {
         <div className="card-overlay">
           <div className="card-header">
             <svg className="card-arc" xmlns="http://www.w3.org/2000/svg">
-              <path d="M 40 80 c 22 0 40 -22 40 -40 v 40 Z" id="path" />
+              {/* <path d="M 40 80 c 22 0 40 -22 40 -40 v 40 Z" id="path" /> */}
             </svg>
-            <img className="card-thumb" src={project.image} alt="" />
-            <div className="card-header-text">
-              <a href={project.liveLink}>
-                <h1 className="card-title">{project.name}</h1>
-              </a>
-              <span className="card-year">{project.year}</span>
-            </div>
+            <ul>
+              <li>
+                <img className="card-thumb" src={project.image} alt="" />
+              </li>
+              <li>
+                <div className="links">
+                  {project.liveLink ? (
+                    <a
+                      href={project.liveLink}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      id="Web"
+                      className="icon i-web"
+                    >
+                      <WebIcon />
+                    </a>
+                  ) : null}
+
+                  <a
+                    href={project.repoLink}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    id="Github"
+                    className="icon i-github"
+                  >
+                    <GithubIcon />
+                  </a>
+                </div>
+              </li>
+            </ul>
           </div>
           {/* <p className="card-description">{project.description}</p> */}
         </div>
@@ -34,6 +59,18 @@ const ProjectComponentStyled = styled.div`
     box-sizing: border-box;
   }
 
+  .links {
+    display: flex;
+    display: inline-block;
+    .icon {
+      padding: 0.25rem 0.25rem;
+      transition: all 0.4s ease-in-out;
+      &:hover {
+        color: var(--primary-color);
+      }
+    }.
+  }
+
   .card {
     position: relative;
     display: block;
@@ -43,14 +80,7 @@ const ProjectComponentStyled = styled.div`
     text-decoration: none;
   }
   .card-image {
-    max-height: 250px;
-    background-size: cover;
-    background-position: fill;
     border-radius: var(--spacing-l);
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
     filter: brightness(1) saturate(1.2) contrast(0.85);
     transform-origin: center;
     transform: scale(1) translateZ(0), translateX(-50%);
@@ -70,6 +100,16 @@ const ProjectComponentStyled = styled.div`
       word-spacing: 100vw;
       font-family: "Montserrat", sans-serif;
     }
+
+    img{
+      max-height: 300px;
+      left: 50%;
+      top: 50%;
+      height: 100%;
+      width: auto;
+      background-size: cover;
+    background-position: fill;
+    }
   }
 
   .card-overlay {
@@ -78,7 +118,7 @@ const ProjectComponentStyled = styled.div`
     left: 0;
     right: 0;
     z-index: 1;
-    background-color: var(--background-dark-color);
+    background-color: rgba(0, 0, 0, 0.35);
     border-radius: calc(var(--curve) * 1px) 0 0 0;
     color: var(--white-color);
     text-align: center;
@@ -102,7 +142,7 @@ const ProjectComponentStyled = styled.div`
   }
 
   .card-arc path {
-    fill: var(--background-dark-color);
+    fill: rgba(0, 0, 0, 0.35);
     /* width: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z"); */
   }
   .card:hover {
@@ -110,8 +150,11 @@ const ProjectComponentStyled = styled.div`
       transform: translateY(0);
     }
     .header-title {
-      transition: all 0.2s ease-in-out;
-      opacity: 0;
+      /* transition: all 0.2s ease-in-out; */
+      /* opacity: 0; */
+    /* text-shadow: 1px 1px 2px var(--border-color); */
+
+
     }
     .card-image {
       transform: scale(1.05) translateZ(0);

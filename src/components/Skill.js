@@ -5,7 +5,7 @@ const Skill = ({ title, image }) => {
   return (
     <SkillStyled>
       <div className="image-content">
-        <img src={image} />
+        <img src={image} alt={title} />
       </div>
       <div className="title-content">
         <span>{title}</span>

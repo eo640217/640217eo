@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Title } from "../components/Title";
-import { InnerLayout, MainLayout } from "../styles/Layouts";
+import { MainLayout } from "../styles/Layouts";
 import projectsData from "../data/projects";
 import Project from "../components/Project";
 import Button from "../components/Button";
+// import { NavLink, Route, Routes } from "react-router-dom";
 
 const allButtons = ["All", ...new Set(projectsData.map((item) => item.side))];
 

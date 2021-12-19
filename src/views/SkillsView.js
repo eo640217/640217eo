@@ -1,9 +1,9 @@
 import React from "react";
 import Skill from "../components/Skill";
 import styled from "styled-components";
-import { InnerLayout, MainLayout } from "../styles/Layouts";
+import { MainLayout } from "../styles/Layouts";
 import { Title } from "../components/Title";
-import avatar from "../images/avatar.jpg";
+// import avatar from "../images/avatar.jpg";
 import skillsData from "../data/skills";
 
 export const SkillsView = () => {

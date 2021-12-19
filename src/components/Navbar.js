@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
-import RestartAltIcon from "@mui/icons-material/RestartAlt";
-import { InnerLayout } from "../styles/Layouts";
 
 const Navbar = () => {
   return (
@@ -10,6 +8,18 @@ const Navbar = () => {
       <div className="nav-container">
         <nav className="navbar">
           <ul>
+            <li className="nav-item">
+              <Link
+                activeClass="active"
+                to="landing"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+              >
+                <span>Home</span>
+              </Link>
+            </li>
             <li className="nav-item">
               <Link
                 activeClass="active"
@@ -58,6 +68,7 @@ const Navbar = () => {
                 <span>About</span>
               </Link>
             </li>
+
             <li className="nav-item">
               <Link
                 activeClass="active"
@@ -68,20 +79,6 @@ const Navbar = () => {
                 duration={500}
               >
                 <span>Contact</span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="landing"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-              >
-                <div className="restart-icon">
-                  <RestartAltIcon />
-                </div>
               </Link>
             </li>
           </ul>

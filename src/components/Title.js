@@ -13,6 +13,7 @@ export const Title = ({ title, span }) => {
 };
 const TitleStyled = styled.div`
   position: relative;
+
   h1 {
     color: var(--white-color);
     font-size: clamp(1.8rem, 3vw + 1.8rem, 2.8rem);
@@ -39,6 +40,7 @@ const TitleStyled = styled.div`
       left: 0;
     }
     span {
+      animation: float 2.5s infinite normal ease-in-out;
       font-weight: 800;
       color: rgba(25, 29, 43, 0.44);
       font-size: clamp(2.8rem, 3vw + 4.8rem, 4.8rem);
@@ -46,6 +48,17 @@ const TitleStyled = styled.div`
       left: 0;
       top: 10%;
       z-index: -1;
+    }
+  }
+  @keyframes float {
+    0% {
+      top: -10px;
+    }
+    50% {
+      top: 5px;
+    }
+    100% {
+      top: -10px;
     }
   }
 `;
