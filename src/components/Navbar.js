@@ -117,7 +117,7 @@ const NavbarStyled = styled.nav`
   justify-content: center;
 
   span {
-    font-size: 2vw;
+    font-size: 2.1vw;
   }
 
   .navbar ul {
