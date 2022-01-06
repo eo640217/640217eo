@@ -16,27 +16,34 @@ export const skills = [
   },
   { name: "CSS", image: "https://img.icons8.com/color/48/000000/css3.png" },
   {
+    name: "C",
+    image: "https://img.icons8.com/color/48/000000/c-programming.png",
+  },
+  {
     name: "Python",
     image: "https://img.icons8.com/color/48/000000/python--v1.png",
   },
   {
-    name: "C&C++",
+    name: "C++",
     image: "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png",
   },
   { name: "Git", image: "https://img.icons8.com/color/48/000000/git.png" },
   {
-    name: "Sql",
-    image: "https://img.icons8.com/color/48/000000/postgreesql.png",
-  },
-
-  {
-    name: "No Sql",
+    name: "No SQL",
     image: "https://img.icons8.com/color/48/000000/mongodb.png",
+  },
+  {
+    name: "SQL",
+    image: "https://img.icons8.com/color/48/000000/postgreesql.png",
   },
 
   {
     name: "Teamwork",
     image: "https://img.icons8.com/color/48/000000/teamwork--v2.png",
+  },
+  {
+    name: "Azure",
+    image: "https://img.icons8.com/color/48/000000/azure-1.png",
   },
 ];
 export default skills;

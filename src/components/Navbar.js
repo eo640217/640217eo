@@ -1,87 +1,107 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const Navbar = () => {
+  const menuIcon = <MenuIcon />;
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const toggleNav = () => {
+    setToggleMenu(!toggleMenu);
+  };
+
+  useEffect(() => {
+    const changeWidth = () => {
+      setScreenWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", changeWidth);
+  });
+
   return (
     <NavbarStyled>
       <div className="nav-container">
+        <button className="nav-btn" onClick={toggleNav}>
+          {menuIcon}
+        </button>
         <nav className="navbar">
-          <ul>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="landing"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-              >
-                <span>Home</span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="projects"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-              >
-                <span>Projects</span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="skills"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-              >
-                <span>Skills</span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="resume"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-              >
-                <span>Resume</span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-              >
-                <span>About</span>
-              </Link>
-            </li>
+          {(toggleMenu || screenWidth > 561) && (
+            <ul>
+              <li className="nav-item">
+                <Link
+                  activeClass="active"
+                  to="landing"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                >
+                  <span>Home</span>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  activeClass="active"
+                  to="projects"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                >
+                  <span>Projects</span>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  activeClass="active"
+                  to="skills"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                >
+                  <span>Skills</span>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  activeClass="active"
+                  to="resume"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                >
+                  <span>Resume</span>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  activeClass="active"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                >
+                  <span>About</span>
+                </Link>
+              </li>
 
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-              >
-                <span>Contact</span>
-              </Link>
-            </li>
-          </ul>
+              <li className="nav-item">
+                <Link
+                  activeClass="active"
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                >
+                  <span>Contact</span>
+                </Link>
+              </li>
+            </ul>
+          )}
         </nav>
       </div>
     </NavbarStyled>
@@ -95,6 +115,7 @@ const NavbarStyled = styled.nav`
   width: 100%;
   color: rgba(255, 255, 255, 0.3);
   justify-content: center;
+
   span {
     font-size: 2vw;
   }
@@ -103,31 +124,67 @@ const NavbarStyled = styled.nav`
     border-radius: 25px;
     flex-wrap: wrap;
     display: flex;
-    list-style: none;
     width: 100%;
+    gap: var(--gap, 1rem);
     justify-content: center;
     transition: all 0.4s ease-in-out;
+    padding: 1rem;
     &:hover {
       color: var(--white-color);
       background-color: var(--background-dark-color);
     }
   }
   .navbar ul li {
-    padding: 1rem;
-    margin: 0 1rem;
     font-weight: 700;
     cursor: pointer;
     a {
       transition: 0.4s ease-in-out;
     }
   }
+  .nav-btn {
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: var(--white-color);
+  }
 
-  @media (min-width: 350px) {
+  @media (max-width: 35em) {
+    .nav-btn {
+      display: block;
+      z-index: 1000;
+      position: absolute;
+      top: 7px;
+      right: 10px;
+      padding: 3px;
+    }
+    .navbar ul {
+      position: fixed;
+      inset: 0 0 0 40%;
+      background: var(--background-dark-grey);
+      color: var(--white-color);
+      flex-direction: column;
+      list-style: none;
+      padding: min(20rem, 15vh) 2rem;
+      transform: (100%);
+      transition: 500ms ease-in-out;
+      gap: 0;
+      /* background: hsl(0 0% 100% / 0.5); */
+      backdrop-filter: blur(1rem);
+      :hover {
+        background: var(--background-dark-grey);
+      }
+    }
+    .nav-item:before {
+      content: "";
+      opacity: 1;
+    }
     .navbar ul li {
-      margin: 0;
+      text-transform: uppercase;
+      font-weight: 400;
     }
     span {
-      font-size: 2vw;
+      font-size: 1.4rem;
     }
   }
 
@@ -140,7 +197,7 @@ const NavbarStyled = styled.nav`
     position: absolute;
     left: 0;
     right: 0;
-    top: 40px;
+    top: 20px;
     height: 5px;
     background: var(--background-dark-color);
     opacity: 0;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { MainLayout, InnerLayout } from "../styles/Layouts";
 import { Title } from "../components/Title";
@@ -6,47 +6,24 @@ import ContactItem from "../components/ContactItem";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import EmailIcon from "@mui/icons-material/Email";
-import PrimaryButton from "../components/PrimaryButton";
+// import PrimaryButton from "../components/PrimaryButton";
 import LinkedinIcon from "@material-ui/icons/LinkedIn";
 import GithubIcon from "@material-ui/icons/GitHub";
-
-const encode = (data) => {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-};
+// import Maps from "../components/Maps";
 
 export const ContactView = () => {
   const phoneIcon = <PhoneIcon />;
   const locationIcon = <LocationOnIcon />;
   const emailIcon = <EmailIcon />;
 
-  const [state, setState] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleChange = (e) =>
-    setState({ ...state, [e.target.name]: e.target.value });
-
-  const handleSubmit = (e) => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contactForm", ...state }),
-    })
-      .then(() => alert("Success!"))
-      .catch((error) => alert(error));
-    e.preventDefault();
-  };
-
   return (
     <MainLayout>
       <Title title="Contact" span="Contact" />
       <ContactViewStyled>
         <InnerLayout className="contact-section">
+          {/* <div className="left-content">
+            <Maps />
+          </div> */}
           {/* <div className="left-content">
             <div className="contact-title">
               <h4>Let's Get In Touch</h4>
@@ -82,21 +59,21 @@ export const ContactView = () => {
           <div className="right-content">
             <div className="contact-item">
               <ContactItem
-                title={"Email: "}
+                // title={"Email: "}
                 icon={emailIcon}
                 contact1={"eolufelo@gmail.com"}
               />
             </div>
             <div className="contact-item">
               <ContactItem
-                title={"Phone: "}
+                // title={"Phone: "}
                 icon={phoneIcon}
                 contact1={"647 283 9607"}
               />
             </div>
             <div className="contact-item">
               <ContactItem
-                title={"Location: "}
+                // title={"Location: "}
                 icon={locationIcon}
                 contact1={"Brampton, ON"}
               />
