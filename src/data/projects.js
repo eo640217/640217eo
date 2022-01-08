@@ -26,6 +26,19 @@ export const projects = [
     side: "Full Stack",
   },
   {
+    name: "Spacestagram",
+    id: "spacestragram",
+    image:
+      "https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+    liveLink: "https://spacestagram2022.netlify.app/",
+    repoLink: "https://github.com/eo640217/spacestagram",
+    description:
+      "Shopify Challenge Project Using NASA Api to collect data to post images. Users can search and like for images of their preference. Made with React JS.",
+    documentation: "",
+    year: "2022",
+    side: "Frontend",
+  },
+  {
     name: "Hospital Management System",
     id: "hospital",
     image:
@@ -48,7 +61,7 @@ export const projects = [
     description: "Lorem ipsum dolor sit amet.",
     documentation: "",
     year: "2021",
-    side: "Full Stack",
+    side: "Frontend",
   },
 ];
 export default projects;

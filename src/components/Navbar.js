@@ -158,6 +158,11 @@ const NavbarStyled = styled.nav`
       right: 10px;
       padding: 3px;
     }
+    transition: 500ms ease-in-out;
+    .navbar ul:before {
+      inset: 0 0 0 -100%;
+      opacity: 0;
+    }
     .navbar ul {
       position: fixed;
       inset: 0 0 0 40%;
@@ -167,8 +172,8 @@ const NavbarStyled = styled.nav`
       list-style: none;
       padding: min(20rem, 15vh) 2rem;
       transform: (100%);
-      transition: 500ms ease-in-out;
       gap: 0;
+      opacity: 1;
       /* background: hsl(0 0% 100% / 0.5); */
       backdrop-filter: blur(1rem);
       :hover {
