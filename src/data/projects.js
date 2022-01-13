@@ -36,7 +36,7 @@ export const projects = [
       "Shopify Challenge Project Using NASA Api to collect data to post images. Users can search and like for images of their preference. Made with React JS.",
     documentation: "",
     year: "2022",
-    side: "Frontend",
+    side: "Front End",
   },
   {
     name: "Hospital Management System",
@@ -61,7 +61,7 @@ export const projects = [
     description: "Lorem ipsum dolor sit amet.",
     documentation: "",
     year: "2021",
-    side: "Frontend",
+    side: "Front End",
   },
 ];
 export default projects;
