@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { InnerLayout, MainLayout } from "../styles/Layouts";
 import { Title } from "../components/Title";
-import image from "../images/avatar.jpg";
+import image from "../images/myself.jpg";
 
 export const AboutView = () => {
   return (
@@ -15,26 +15,25 @@ export const AboutView = () => {
           </div>
           <div className="right-content">
             <p className="paragraph">
-              <strong>I</strong> am currently a 4th-year Computer Science
-              Honours student at Carleton University, specializing in Business
-              and Systems Management. My interest in computer science sparked
-              when I began gaming and video editing.
+              I am currently a 4th-year Computer Science Honours student at
+              Carleton University, specializing in Business and Systems
+              Management. My interest in software development sparked when I
+              began gaming and video editing.
               <br />
               <br />
-              <strong>C</strong>omputer science has since allowed me to tap into
-              multiple sub-industries within the tech realm and allowed me to
-              grow an understanding of what goes on within a program.
+              Since then, I have tapped into multiple
+              sub-industries within the tech realm and allowed myself to grow an
+              understanding of what goes on within a program.
               <br />
               <br />
-              <strong>O</strong>ver the course of my degree, I have learned
-              languages such as Swift, Python, JavaScript, Java, C/C++, Prolog,
-              SQL, Kotlin as well as work with WebDriverIO, Node.js, React,
-              JSON, CSS, MongoDB, PostgreSQL, Redux, Jupyter and Git.
+              My goal is to become a highly skilled software engineer that will
+              be ready to take on the challenges of tomorrow. I am always
+              looking for opportunities to grow, be it internship or mentorship.
               <br />
               <br />
-              <strong>P</strong>rogramming is a skill I have a passion for,
-              especially due to my enjoyment of problem-solving. So, I am always
-              looking to sharpen my skills in the field.
+              Whenever I am not coding, I enjoy spending my free time dressing
+              up, listening to my favourite artists, hanging out with my friends, exercising
+              or thinking of new ideas.
             </p>
             <div>
               <div className="about-info">
@@ -43,8 +42,8 @@ export const AboutView = () => {
                   <p>Languages </p>
                 </div>
                 <div className="info">
-                  <p> : Emmanuel Olufelo</p>
-                  <p> : English / French</p>
+                  <p> : Emmanuel Oluwatimilehin Olufelo</p>
+                  <p> : English & French</p>
                 </div>
               </div>
             </div>
@@ -67,7 +66,9 @@ const AboutStyled = styled.section`
     .about-info {
       padding-bottom: 0.4rem;
       display: flex;
-      font-size: 0.8rem;
+      p {
+        font-size: clamp(0.8rem, 2vw + 0.8rem, 1rem);
+      }
     }
     .paragraph {
       font-size: clamp(0.8rem, 2vw + 0.8rem, 1rem);
@@ -86,8 +87,6 @@ const AboutStyled = styled.section`
       margin-right: auto;
       width: 100%;
       object-fit: cover;
-      border-radius: 50%;
-      max-width: 300px;
     }
   }
 

@@ -11,10 +11,20 @@ export const SkillsView = () => {
     <SkillsViewStyled>
       <MainLayout>
         <Title title={"Skills"} span={"Skills"} />
+        <div className="hover-message">
+          <p>Hover on skill for technologies / frameworks</p>
+        </div>
         <div className="skills-grid">
           {skillsData.map((skill) => (
             <div className="skill">
-              <Skill title={skill.name} image={skill.image} />
+              <span className="tooltip">
+                <Skill title={skill.name} image={skill.image} />
+                {skill.technologies.length ? (
+                  <span className="tooltip-text">{skill.technologies}</span>
+                ) : (
+                  <></>
+                )}
+              </span>
             </div>
           ))}
         </div>
@@ -31,16 +41,9 @@ const SkillsViewStyled = styled.div`
   padding: 0;
   cursor: default;
 
-  @media (min-width: 540px) {
-    .skills-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (min-width: 960px) {
-    .skills-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
+  .hover-message {
+    margin: 2rem 0 0 0;
+    opacity: 0.4;
   }
 
   .skills-grid {
@@ -60,5 +63,56 @@ const SkillsViewStyled = styled.div`
   .skills-grid:hover > .skill:not(:hover) {
     opacity: 0.4;
     filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+  }
+
+  .tooltip {
+    position: relative;
+  }
+
+  .tooltip .tooltip-text {
+    font-size: 0.8em;
+    line-height: 1.5em;
+    visibility: hidden;
+    max-width: max-content;
+    background-color: var(--border-color);
+    color: var(--white-color);
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -30px;
+    opacity: 0;
+    transition: 0.3s;
+    transform: translate3d(0px, 20px, 0px);
+  }
+  .tooltip:hover .tooltip-text {
+    visibility: visible;
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1;
+  }
+  @media (max-width: 540px) {
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 540px) {
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 800px) {
+    .skills-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 940px) {
+    .skills-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 `;

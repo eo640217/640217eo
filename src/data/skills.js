@@ -10,6 +10,7 @@ export const skills = [
       " Bootstrap",
       " NextJS",
       " Gatsby ",
+      " Redux ",
     ],
   },
   {
@@ -18,12 +19,12 @@ export const skills = [
       "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png",
     technologies: [
       "Spring",
-      "Web MVC",
-      "AOP",
-      "Hibernate",
-      "Thymeleaf",
-      "JPA",
-      "Spring Security",
+      " Web-MVC",
+      " AOP",
+      " Hibernate",
+      " Thymeleaf",
+      " JPA",
+      " Spring-Security",
     ],
   },
   {
@@ -45,7 +46,13 @@ export const skills = [
   {
     name: "Python",
     image: "https://img.icons8.com/color/48/000000/python--v1.png",
-    technologies: ["Pandas", "NumPy", "TensorFlow", "scikit-learn", "selenium"],
+    technologies: [
+      "Pandas",
+      " NumPy",
+      " TensorFlow",
+      " Scikit-learn",
+      " Selenium",
+    ],
   },
   {
     name: "C++",
@@ -65,7 +72,7 @@ export const skills = [
   {
     name: "SQL",
     image: "https://img.icons8.com/color/48/000000/postgreesql.png",
-    technologies: ["PostgresSQL", "MySql"],
+    technologies: ["PostgresSQL", " MySQL"],
   },
 
   {
@@ -86,7 +93,7 @@ export const skills = [
   {
     name: "C#",
     image: "https://img.icons8.com/color/48/000000/c-sharp-logo.png",
-    technologies: ["ASP.NET Core WebAPI", "DotNet CLI"],
+    technologies: ["ASP.NET-Core-WebAPI", " DotNet-CLI"],
   },
 ];
 export default skills;
