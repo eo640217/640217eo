@@ -79,14 +79,14 @@ export const skills = [
     technologies: ["Azure"],
   },
   {
-    name: "C#",
-    image: "https://img.icons8.com/color/48/000000/c-sharp-logo.png",
-    technologies: ["ASP.NET Core WebAPI", "DotNet CLI"],
-  },
-  {
     name: "TypeScript",
     image: "https://img.icons8.com/color/50/000000/typescript.png",
     technologies: [],
+  },
+  {
+    name: "C#",
+    image: "https://img.icons8.com/color/48/000000/c-sharp-logo.png",
+    technologies: ["ASP.NET Core WebAPI", "DotNet CLI"],
   },
 ];
 export default skills;
