@@ -45,7 +45,7 @@ export const skills = [
   {
     name: "Python",
     image: "https://img.icons8.com/color/48/000000/python--v1.png",
-    technologies: ["Pandas", "NumPy", "TensorFlow", "scikit-learn", "selenium"],
+    technologies: ["Pandas", "NumPy", "TensorFlow", "scikit-learn", "Selenium"],
   },
   {
     name: "C++",
