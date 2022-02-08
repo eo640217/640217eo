@@ -9,7 +9,7 @@ export const skills = [
       " AOS",
       " Bootstrap",
       " NextJS",
-      " Gatsby",
+      " Gatsby" ,
     ],
   },
   {
