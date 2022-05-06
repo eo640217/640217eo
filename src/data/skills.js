@@ -1,4 +1,4 @@
-export const skills = [
+export const skills = [ 
   {
     name: "JavaScript",
     image:
@@ -31,7 +31,7 @@ export const skills = [
     name: "HTML",
     image:
       "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-html-5-is-a-software-solution-stack-that-defines-the-properties-and-behaviors-of-web-page-logo-shadow-tal-revivo.png",
-    technologies: [],
+    technologies: [ ] ,
   },
   {
     name: "CSS",
