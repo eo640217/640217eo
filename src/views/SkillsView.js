@@ -3,7 +3,6 @@ import Skill from "../components/Skill";
 import styled from "styled-components";
 import { MainLayout } from "../styles/Layouts";
 import { Title } from "../components/Title";
-// import avatar from "../images/avatar.jpg";
 import skillsData from "../data/skills";
 
 export const SkillsView = () => {
@@ -58,6 +57,7 @@ const SkillsViewStyled = styled.div`
     transition: 0.4s;
     transform: scale(1.05) translateZ(0);
     padding: 1rem;
+    animation: fadeIn 1s ease-in-out;
   }
 
   .skills-grid:hover > .skill:not(:hover) {
@@ -92,6 +92,15 @@ const SkillsViewStyled = styled.div`
     visibility: visible;
     transform: translate3d(0px, 0px, 0px);
     opacity: 1;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   @media (max-width: 540px) {
     .skills-grid {
