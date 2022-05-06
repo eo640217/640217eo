@@ -15,8 +15,8 @@ export const AboutView = () => {
           </div>
           <div className="right-content">
             <p className="paragraph">
-              I am currently a 4th-year Computer Science Honours student at
-              Carleton University, specializing in Business and Systems
+              I am a Computer Science Graduate from
+              Carleton University where I specialized in Business and Systems
               Management. My interest in software development sparked when I
               began gaming and video editing.
               <br />

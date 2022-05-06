@@ -19,13 +19,20 @@ export const ResumeView = () => {
             <SmallTitle icon={work} title={"Experience"} />
           </div>
           <div className="resume-content">
+          <ResumeItem
+              title={"Software Developer"}
+              subtitle={"BMO Financial Group"}
+              description={
+                "Implementing initiatives as required to deliver business objectives."  }
+              year={"May 2022 - Current"}
+            />
             <ResumeItem
               title={"Sports Data Analyst Intern"}
               subtitle={"Canadian Tire"}
               description={
                 "Building and maintaining large sport performance databases using automated data collection tools.\n Use Python to data mine large quantities of historical Olympic and senior-level performance data. Create statistical models and performance metrics to evaluate future athlete potential, Develop interactive tools/dashboards for Canadian Sport Organizations.  "
               }
-              year={"Jan 2022 -"}
+              year={"Jan 2022 - Apr 2022"}
             />
             <ResumeItem
               title={"Financial Data Analyst Intern"}

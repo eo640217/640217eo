@@ -19,8 +19,8 @@ const ResumeItemStyled = styled.div`
   display: flex;
   p,
   h5,
+  font-size: clamp(0.8rem, 2vw + 0.8rem, 1rem);
   h6 {
-    font-size: clamp(0.8rem, 2vw + 0.8rem, 1rem);
   }
 
   &:not(:last-child) {
@@ -28,11 +28,12 @@ const ResumeItemStyled = styled.div`
   }
 
   .left-content {
-    max-width: 16ch;
+    max-width: 10ch;
     min-width: 8ch;
 
     padding-left: 20px;
     position: relative;
+    border: solid red 1px ;
 
     &::before {
       content: "";
