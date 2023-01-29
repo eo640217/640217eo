@@ -33,7 +33,6 @@ const ResumeItemStyled = styled.div`
 
     padding-left: 20px;
     position: relative;
-    border: solid red 1px ;
 
     &::before {
       content: "";
