@@ -89,7 +89,7 @@ export const ContactView = () => {
                 <GithubIcon />
               </a>
               <a
-                href="https://www.linkedin.com/in/emmanuel-olufelo-70775420b/"
+                href="https://www.linkedin.com/in/emmanuel-olufelo"
                 rel="noopener noreferrer"
                 target="_blank"
                 id="Linkedin"

@@ -15,25 +15,27 @@ export const AboutView = () => {
           </div>
           <div className="right-content">
             <p className="paragraph">
-              I am a Computer Science Graduate from
-              Carleton University where I specialized in Business and Systems
-              Management. My interest in software development sparked when I
-              began gaming and video editing.
+              As a recent graduate from Carleton University, specializing in
+              Business and Systems Management, I have cultivated a multifaceted
+              understanding of technology and its applications. My journey into
+              software development began with my fascination for gaming and
+              video editing, igniting a passion that has driven me to explore
+              various sub-industries within the tech realm.
               <br />
               <br />
-              Since then, I have tapped into multiple
-              sub-industries within the tech realm and allowed myself to grow an
-              understanding of what goes on within a program.
+              With a solid foundation in computer science and a keen interest in
+              software engineering, I am committed to becoming a highly skilled
+              professional capable of tackling the challenges of tomorrow's
+              digital landscape. I am actively seeking opportunities for growth,
+              whether through internships or mentorships, to further refine my
+              skills and expand my knowledge.
               <br />
               <br />
-              My goal is to become a highly skilled software engineer that will
-              be ready to take on the challenges of tomorrow. I am always
-              looking for opportunities to grow, be it internship or mentorship.
-              <br />
-              <br />
-              Whenever I am not coding, I enjoy spending my free time dressing
-              up, listening to my favourite artists, hanging out with my friends, exercising
-              or thinking of new ideas.
+              Outside of coding, I embrace my diverse interests, including
+              fashion, music, socializing with friends, staying active, and
+              nurturing my creativity through brainstorming new ideas. I believe
+              in maintaining a well-rounded lifestyle that fuels both personal
+              and professional growth.
             </p>
             <div>
               <div className="about-info">

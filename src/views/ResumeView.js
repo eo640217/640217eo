@@ -55,8 +55,7 @@ export const ResumeView = () => {
               title={"BSC Computer Science"}
               subtitle={"Carleton University"}
               description={
-                "Over the course of my degree, not only did I learn how to code but also theory behind it. Data structures, (linked lists, binary trees, dictionaries, etc), useful algorithms (e.g. Dijkstra's algorithm), the ways data is stored and interpreted at the bit and byte level , code design patterns, parallel programming & many more skills that has set me up for the rest of my career.  "
-              }
+                "Throughout my academic journey, I not only acquired coding skills but also delved into the theoretical foundations of programming. This included understanding various data structures such as linked lists, binary trees, and dictionaries, as well as learning essential algorithms like Dijkstra's algorithm. Moreover, I gained insights into how data is stored and interpreted at the bit and byte level, explored code design patterns, and dived into parallel programming, among other valuable skills. These experiences have equipped me with a solid foundation for my future career endeavors."}
               year={"Sept 2017 - Apr 2022"}
             />
           </div>
