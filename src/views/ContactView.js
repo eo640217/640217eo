@@ -64,13 +64,13 @@ export const ContactView = () => {
                 contact1={"eolufelo@gmail.com"}
               />
             </div>
-            <div className="contact-item">
+            {/* <div className="contact-item">
               <ContactItem
                 // title={"Phone: "}
                 icon={phoneIcon}
-                contact1={"647 283 9607"}
+                contact1={""}
               />
-            </div>
+            </div> */}
             <div className="contact-item">
               <ContactItem
                 // title={"Location: "}
