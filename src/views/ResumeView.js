@@ -23,7 +23,7 @@ export const ResumeView = () => {
               title={"Software Developer"}
               subtitle={"BMO Financial Group"}
               description={
-                "Implementing initiatives as required to deliver business objectives."  }
+                "Create user-facing features and components using HTML, CSS, and JavaScript with Angular Framework. Design and implement server-side logic and databases using technologies like Node.js.\n Completed Bank Of The West Conversion. Helped convert 12,000 customers / 33,000 users to BMO.\n Oversee the deployment integration process, which encompasses continuous integration, automated testing, artifact generation, configuration management, deployment pipeline creation, deployment automation, rollout strategy planning, monitoring, rollback procedures, and post-deployment validation."  }
               year={"May 2022 - Current"}
             />
             <ResumeItem
