@@ -38,6 +38,17 @@ export const projects = [
     year: "2022",
     side: "Front End",
   },
+    {
+    name: "Kijiji Car Listings Scraper & Analyzer",
+    id: "",
+    image:"https://images.pexels.com/photos/30934036/pexels-photo-30934036.jpeg",
+    liveLink: "",
+    repoLink: "",
+    description: "Lorem ipsum dolor sit amet.",
+    documentation: "", 
+    year: "2021",
+    side: "Back End",
+  },
   {
     name: "Hospital Management System",
     id: "hospital",

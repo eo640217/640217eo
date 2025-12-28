@@ -26,11 +26,11 @@ export const Landing = () => {
               <span>
                 Software Engineer
                 <br />
-                Data Analyst
+                Full Stack
                 <br />
-                Full Stack Developer
+                Frontend Specialist
                 <br />
-                Freelance
+                Systems Builder
               </span>
             </div>
           </div>

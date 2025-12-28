@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { InnerLayout, MainLayout } from "../styles/Layouts";
 import { Title } from "../components/Title";
-import image from "../images/myself.jpg";
+import image from "../images/myself_2025_2.png";
 
 export const AboutView = () => {
   return (
@@ -14,29 +14,6 @@ export const AboutView = () => {
             <img src={image} alt="about" />
           </div>
           <div className="right-content">
-            <p className="paragraph">
-              As a recent graduate from Carleton University, specializing in
-              Business and Systems Management, I have cultivated a multifaceted
-              understanding of technology and its applications. My journey into
-              software development began with my fascination for gaming and
-              video editing, igniting a passion that has driven me to explore
-              various sub-industries within the tech realm.
-              <br />
-              <br />
-              With a solid foundation in computer science and a keen interest in
-              software engineering, I am committed to becoming a highly skilled
-              professional capable of tackling the challenges of tomorrow's
-              digital landscape. I am actively seeking opportunities for growth,
-              whether through internships or mentorships, to further refine my
-              skills and expand my knowledge.
-              <br />
-              <br />
-              Outside of coding, I embrace my diverse interests, including
-              fashion, music, socializing with friends, staying active, and
-              nurturing my creativity through brainstorming new ideas. I believe
-              in maintaining a well-rounded lifestyle that fuels both personal
-              and professional growth.
-            </p>
             <div>
               <div className="about-info">
                 <div className="info-title">
@@ -49,6 +26,28 @@ export const AboutView = () => {
                 </div>
               </div>
             </div>
+            <p className="paragraph">
+              I’m a software engineer with four years of professional experience building and maintaining user-focused,
+              scalable applications at the intersection of business and technology. With an academic background in Business
+              and Systems Management from Carleton University, I bring a pragmatic, systems-level mindset to software
+              development—balancing technical execution with product and business considerations.
+              <br />
+              <br />
+              My path into engineering began through creative outlets like gaming and video editing, which sparked a long-standing 
+              curiosity about how software is built and optimized. Since then, I’ve worked across multiple areas of the tech stack, 
+              strengthening my foundation in computer science while developing a strong appreciation for clean architecture, 
+              maintainable code, and thoughtful user experiences.
+              <br />
+              <br />
+              I’m motivated by solving real-world problems and continuously improving my craft—whether that means refining system 
+              designs, learning new technologies, or collaborating closely with cross-functional teams to deliver meaningful results. 
+              I value environments that encourage ownership, growth, and technical excellence.
+              <br />
+              <br />
+              Outside of work, I enjoy staying active, exploring fashion and music, and spending time with friends. 
+              I’m naturally creative and enjoy brainstorming new ideas, believing that a well-rounded life ultimately 
+              leads to better problem-solving and stronger work as an engineer.
+            </p>
           </div>
         </AboutStyled>
       </InnerLayout>
@@ -58,6 +57,7 @@ export const AboutView = () => {
 
 const AboutStyled = styled.section`
   display: flex;
+  align-items: stretch;
   height: max-content;
   strong {
     color: var(--primary-color);
@@ -65,6 +65,8 @@ const AboutStyled = styled.section`
 
   .right-content {
     padding: 0 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
     .about-info {
       padding-bottom: 0.4rem;
       display: flex;
@@ -81,14 +83,18 @@ const AboutStyled = styled.section`
     }
   }
   .left-content {
-    width: max-content;
+    display: flex;
+    align-items: center;
     padding: 1rem 0;
+    max-height: 1000px;
+    max-width: 500px;
+    min-height: 400px;
+    min-width: 400px;
     img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-      object-fit: cover;
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+      object-fit: contain;
     }
   }
 
@@ -97,7 +103,6 @@ const AboutStyled = styled.section`
     .left-content {
       width: 100%;
       img {
-        max-width: 100px;
         margin-left: auto;
         margin-right: auto;
       }
@@ -109,4 +114,31 @@ const AboutStyled = styled.section`
       }
     }
   }
+
+  @media (max-width: 1000px) {
+  flex-direction: column;
+
+  .left-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: unset;
+    justify-content: center;
+
+    img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .right-content {
+    max-width: 100%;
+    padding: 0 1rem;
+
+    .paragraph,
+    p {
+      font-size: 90%;
+    }
+  }
+}
+
 `;

@@ -214,6 +214,28 @@ const NavbarStyled = styled.nav`
     opacity: 1;
     background: var(--primary-color);
   }
+
+  @media (min-width: 960px and max-width:1350px) {
+    .nav-item:before {
+      top: 20px;
+    }
+  }
+
+  @media (min-width: 1351px and max-width:1500px) {
+    .nav-item:before {
+      top: 30px;
+    }
+  }
+  @media (min-width: 1501px and max-width:1800px) {
+    .nav-item:before {
+      top: 40px;
+    }
+  }
+  @media (min-width: 1801px) {
+    .nav-item:before {
+      top: 45px;
+    }
+  }
 `;
 
 export default Navbar;

@@ -4,8 +4,9 @@ export const skills = [
     image:
       "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-javascript-is-a-high-level-interpreted-programming-language-logo-color-tal-revivo.png",
     technologies: [
-      "NodeJS",
+      " NodeJS",
       " ReactJS",
+      " AngularJS",
       " AOS",
       " Bootstrap",
       " NextJS",
@@ -83,7 +84,7 @@ export const skills = [
   {
     name: "Cloud Computing",
     image: "https://img.icons8.com/color/48/000000/azure-1.png",
-    technologies: ["Azure"],
+    technologies: ["Azure","AWS"],
   },
   {
     name: "TypeScript",
