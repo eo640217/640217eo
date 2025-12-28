@@ -15,27 +15,26 @@ export const AboutView = () => {
           </div>
           <div className="right-content">
             <p className="paragraph">
-              As a recent graduate from Carleton University, specializing in
-              Business and Systems Management, I have cultivated a multifaceted
-              understanding of technology and its applications. My journey into
-              software development began with my fascination for gaming and
-              video editing, igniting a passion that has driven me to explore
-              various sub-industries within the tech realm.
+              I’m a software engineer with four years of professional experience building and maintaining user-focused, 
+              scalable applications at the intersection of business and technology. With an academic background in Business 
+              and Systems Management from Carleton University, I bring a pragmatic, systems-level mindset to software 
+              development—balancing technical execution with product and business considerations.
               <br />
               <br />
-              With a solid foundation in computer science and a keen interest in
-              software engineering, I am committed to becoming a highly skilled
-              professional capable of tackling the challenges of tomorrow's
-              digital landscape. I am actively seeking opportunities for growth,
-              whether through internships or mentorships, to further refine my
-              skills and expand my knowledge.
+              My path into engineering began through creative outlets like gaming and video editing, which sparked a long-standing 
+              curiosity about how software is built and optimized. Since then, I’ve worked across multiple areas of the tech stack, 
+              strengthening my foundation in computer science while developing a strong appreciation for clean architecture, 
+              maintainable code, and thoughtful user experiences.
               <br />
               <br />
-              Outside of coding, I embrace my diverse interests, including
-              fashion, music, socializing with friends, staying active, and
-              nurturing my creativity through brainstorming new ideas. I believe
-              in maintaining a well-rounded lifestyle that fuels both personal
-              and professional growth.
+              I’m motivated by solving real-world problems and continuously improving my craft—whether that means refining system 
+              designs, learning new technologies, or collaborating closely with cross-functional teams to deliver meaningful results. 
+              I value environments that encourage ownership, growth, and technical excellence.
+              <br />
+              <br />
+              Outside of work, I enjoy staying active, exploring fashion and music, and spending time with friends. 
+              I’m naturally creative and enjoy brainstorming new ideas, believing that a well-rounded life ultimately 
+              leads to better problem-solving and stronger work as an engineer.
             </p>
             <div>
               <div className="about-info">
@@ -58,6 +57,7 @@ export const AboutView = () => {
 
 const AboutStyled = styled.section`
   display: flex;
+  align-items: stretch;
   height: max-content;
   strong {
     color: var(--primary-color);
@@ -65,6 +65,8 @@ const AboutStyled = styled.section`
 
   .right-content {
     padding: 0 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
     .about-info {
       padding-bottom: 0.4rem;
       display: flex;
@@ -81,16 +83,26 @@ const AboutStyled = styled.section`
     }
   }
   .left-content {
-    width: max-content;
+    display: flex;
+    align-items: center;
     padding: 1rem 0;
+    max-height: 1000px;
+    max-width: 300px;
     img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-      object-fit: cover;
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+      object-fit: contain;
     }
   }
+
+  .left-content img {
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
 
   @media (max-width: 700px) {
     flex-direction: column;

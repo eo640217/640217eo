@@ -71,13 +71,13 @@ export const ContactView = () => {
                 contact1={""}
               />
             </div> */}
-            <div className="contact-item">
+            {/* <div className="contact-item">
               <ContactItem
                 // title={"Location: "}
                 icon={locationIcon}
                 contact1={"Brampton, ON"}
               />
-            </div>
+            </div> */}
             <div className="social-icons">
               <a
                 href="https://github.com/eo640217"

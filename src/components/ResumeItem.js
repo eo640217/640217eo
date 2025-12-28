@@ -10,7 +10,9 @@ const ResumeItem = ({ year, title, subtitle, description }) => {
       <div className="right-content">
         <h5>{title}</h5>
         <h6>{subtitle}</h6>
-        <p>{description}</p>
+        {description.map((paragraph, index) => (
+          <div key={index} className="resume-paragraph"><p>{paragraph}</p></div>
+        ))}
       </div>
     </ResumeItemStyled>
   );
@@ -28,9 +30,7 @@ const ResumeItemStyled = styled.div`
   }
 
   .left-content {
-    max-width: 10ch;
-    min-width: 8ch;
-
+    flex-shrink: 0;
     padding-left: 20px;
     position: relative;
 
@@ -81,5 +81,36 @@ const ResumeItemStyled = styled.div`
       font-size: clamp(0.8rem, 1vw + 0.3rem, 0.4rem);
     }
   }
+
+  
+
+  @media (max-width: 1000px){
+    .left-content {
+      flex-shrink: 1;
+    }
+  }
+
+
+  .resume-paragraph {
+    position: relative;
+    padding-top: 0.75rem;
+    margin-top: 1rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;          /* line length */
+      height: 1px;
+      background-color: var(--primary-color);
+      opacity: 0.6;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
 `;
 export default ResumeItem;
