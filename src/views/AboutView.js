@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { InnerLayout, MainLayout } from "../styles/Layouts";
 import { Title } from "../components/Title";
-import image from "../images/myself.jpg";
+import image from "../images/myself_2025_2.png";
 
 export const AboutView = () => {
   return (
@@ -14,10 +14,22 @@ export const AboutView = () => {
             <img src={image} alt="about" />
           </div>
           <div className="right-content">
+            <div>
+              <div className="about-info">
+                <div className="info-title">
+                  <p>Full Name </p>
+                  <p>Languages </p>
+                </div>
+                <div className="info">
+                  <p> : Emmanuel Oluwatimilehin Olufelo</p>
+                  <p> : English & French</p>
+                </div>
+              </div>
+            </div>
             <p className="paragraph">
-              I’m a software engineer with four years of professional experience building and maintaining user-focused, 
-              scalable applications at the intersection of business and technology. With an academic background in Business 
-              and Systems Management from Carleton University, I bring a pragmatic, systems-level mindset to software 
+              I’m a software engineer with four years of professional experience building and maintaining user-focused,
+              scalable applications at the intersection of business and technology. With an academic background in Business
+              and Systems Management from Carleton University, I bring a pragmatic, systems-level mindset to software
               development—balancing technical execution with product and business considerations.
               <br />
               <br />
@@ -36,18 +48,6 @@ export const AboutView = () => {
               I’m naturally creative and enjoy brainstorming new ideas, believing that a well-rounded life ultimately 
               leads to better problem-solving and stronger work as an engineer.
             </p>
-            <div>
-              <div className="about-info">
-                <div className="info-title">
-                  <p>Full Name </p>
-                  <p>Languages </p>
-                </div>
-                <div className="info">
-                  <p> : Emmanuel Oluwatimilehin Olufelo</p>
-                  <p> : English & French</p>
-                </div>
-              </div>
-            </div>
           </div>
         </AboutStyled>
       </InnerLayout>
@@ -87,7 +87,9 @@ const AboutStyled = styled.section`
     align-items: center;
     padding: 1rem 0;
     max-height: 1000px;
-    max-width: 300px;
+    max-width: 500px;
+    min-height: 400px;
+    min-width: 400px;
     img {
       max-height: 100%;
       max-width: 100%;
@@ -96,20 +98,11 @@ const AboutStyled = styled.section`
     }
   }
 
-  .left-content img {
-    max-height: 100%;
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
-  }
-
-
   @media (max-width: 700px) {
     flex-direction: column;
     .left-content {
       width: 100%;
       img {
-        max-width: 100px;
         margin-left: auto;
         margin-right: auto;
       }
@@ -121,4 +114,31 @@ const AboutStyled = styled.section`
       }
     }
   }
+
+  @media (max-width: 1000px) {
+  flex-direction: column;
+
+  .left-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: unset;
+    justify-content: center;
+
+    img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .right-content {
+    max-width: 100%;
+    padding: 0 1rem;
+
+    .paragraph,
+    p {
+      font-size: 90%;
+    }
+  }
+}
+
 `;
