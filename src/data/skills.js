@@ -84,7 +84,7 @@ export const skills = [
   {
     name: "Cloud Computing",
     image: "https://img.icons8.com/color/48/000000/azure-1.png",
-    technologies: ["Azure"],
+    technologies: ["Azure","AWS"],
   },
   {
     name: "TypeScript",

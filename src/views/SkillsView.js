@@ -18,10 +18,12 @@ export const SkillsView = () => {
             <div className="skill">
               <span className="tooltip">
                 <Skill title={skill.name} image={skill.image} />
-                {skill.technologies.length ? (
-                  <span className="tooltip-text">{skill.technologies}</span>
-                ) : (
-                  <></>
+                {skill.technologies.length > 0 && (
+                  <ul className="tooltip-text">
+                    {skill.technologies.map((tech, index) => (
+                      <li styles={"color:red"} key={index}>{tech}</li>
+                    ))}
+                  </ul>
                 )}
               </span>
             </div>
@@ -68,9 +70,11 @@ const SkillsViewStyled = styled.div`
   .tooltip {
     position: relative;
   }
+  .tooltip-text li {
+    font-size: 0.9em;
+  }
 
   .tooltip .tooltip-text {
-    font-size: 0.8em;
     line-height: 1.5em;
     visibility: hidden;
     max-width: max-content;
